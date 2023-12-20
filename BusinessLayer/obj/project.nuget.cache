@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "skTNBHBPTgYUPYx9oJjdvR0l47pvO34WXrwhQ4bWKONff4q6IfS6Jj/DpShN02wbG2CK8UCZIkd2rO1ZmCMTDw==",
+  "dgSpecHash": "oNLbjLbKoIQeScxCyf3G45riuh+pqa5AGMBbBdCLo4R4G8Iqn0O5tZneHD6Tyr4p5BFT3TRLgcsd30qy44B+qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DELL\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
   ],
   "logs": []
 }

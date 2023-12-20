@@ -35,14 +35,10 @@ namespace DataAccessLayer
 
         public void Insert(DataTable p)
         {
-            OleDbConnection connection = new OleDbConnection();
-
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\dernekproje\Dernek.accdb";
-
-            connection.ConnectionString = connectionString;
-
-            connection.Open();
-            string insertQuery = "INSERT INTO dernektablosu (alan1, alan2, alan3) VALUES ('a','b','c')";
+            OleDbConnection connection= new OleDbConnection();
+            
+            string insertQuery = "INSERT INTO uyeTablosu (alan1, alan2, alan3) VALUES ('a','b','c')";
+            
             OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection);
             insertCommand.ExecuteNonQuery();
             connection.Close();
@@ -52,11 +48,8 @@ namespace DataAccessLayer
         {
 
             OleDbConnection connection = new OleDbConnection();
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\dernekproje\Dernek.accdb";
 
-            connection.ConnectionString = connectionString;
-
-            string query = "SELECT * FROM dernektablosu";
+            string query = "SELECT * FROM uyeTablosu";
 
             OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
             DataTable dataTable = new DataTable();
