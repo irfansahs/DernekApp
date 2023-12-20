@@ -28,3 +28,4 @@ C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\System.Diag
 C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
 C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
 C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.sourcelink.json

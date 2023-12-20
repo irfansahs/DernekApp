@@ -1,5 +1,6 @@
 using BusinessLayer;
 using EntityLayer.Entities;
+using System.Data;
 
 namespace DernekApp
 {
@@ -13,16 +14,15 @@ namespace DernekApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource =  dm.ListAll();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Dernek d = new Dernek()
-            {
-                Ad = textBox1.Text
-            };
+            
+            DataTable dataTable = new DataTable();
 
-            dm.Insert(d);
+            dm.Insert(dataTable);
         }
 
         private void button2_Click(object sender, EventArgs e)
