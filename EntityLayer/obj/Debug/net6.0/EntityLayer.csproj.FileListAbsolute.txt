@@ -10,6 +10,7 @@ C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\refint\EntityLaye
 C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
 C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\EntityLayer.sourcelink.json
+<<<<<<< HEAD
 C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
 C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
 C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
@@ -22,3 +23,17 @@ C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.d
 C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
 C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
+=======
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.sourcelink.json
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\selcu.SELCUK.000\source\repos\DernekApp\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
+>>>>>>> 3638d8b66919facff4a02d47231d43428095c32b
