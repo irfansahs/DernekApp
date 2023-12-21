@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "25yXCK6ma/psQJ1D42hghjzks2gTAODCETluEa/+dBOKz2HhuhJyIvDcA70LBsFUpanVJpqxABMzhItLvedCOw==",
+  "dgSpecHash": "V36Iru2VFsyQzfwv/aj3moXk34nUH1Kv9/zh1LeUNxjsTwwbwCvPIrETJI1keeYyEfmDsh1xCNPFXKADyu4axw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",

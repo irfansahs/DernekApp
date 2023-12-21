@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qzkRoYL7qES1y+hKFX+G9C3HLBV8huuPEIMWdyePSTEJ7d/U8VQXNc9e/3JtT5ad6op/QJ7N0HNnJmcJtvxZwg==",
+  "dgSpecHash": "zbe4EHeaPLfudO4i0ykhe6JDDITvI0MSfix7ISVEnUMLNBieKNARs249qLmC2Gz2p0Nl5coF+qfjE5Q0b2MeYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",

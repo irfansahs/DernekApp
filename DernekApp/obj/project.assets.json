@@ -294,11 +294,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj",
       "projectName": "DernekApp",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -315,8 +315,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }

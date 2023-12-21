@@ -10,3 +10,15 @@ C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\refint\EntityLaye
 C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
 C:\Users\DELL\Desktop\dernekproje\EntityLayer\obj\Debug\net6.0\EntityLayer.sourcelink.json
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.sourcelink.json
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\DELL\Desktop\Görsel Finalll\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll

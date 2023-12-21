@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -131,14 +131,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj": {
+    "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj",
         "projectName": "DernekApp",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\DernekApp.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\DernekApp.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\DernekApp\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\DernekApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -155,8 +155,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -193,14 +193,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\dernekproje\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

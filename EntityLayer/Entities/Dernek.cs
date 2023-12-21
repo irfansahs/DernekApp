@@ -11,8 +11,12 @@ namespace EntityLayer.Entities
     {
         [Key]
         public int Id { get; set; }
-        public string Ad { get; set; }
-        public string SoyAd { get; set; }
-        public string Adres { get; set; }
+        public string tc { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string sehir { get; set; }
+        public DateOnly dogTarih { get; set; }
+        public string kanGrubu { get; set; }
+        public bool durum { get; set; }
     }
 }

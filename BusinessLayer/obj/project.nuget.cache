@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "skTNBHBPTgYUPYx9oJjdvR0l47pvO34WXrwhQ4bWKONff4q6IfS6Jj/DpShN02wbG2CK8UCZIkd2rO1ZmCMTDw==",
+  "dgSpecHash": "OoO34neorw5073KsvSbGP/357JbnpeGsfQColJp0bLDSWhkCPLTkIRrVkmmCbKwCdM5Wq+edD17Vq3ufjNoB0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\dernekproje\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\Görsel Finalll\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",

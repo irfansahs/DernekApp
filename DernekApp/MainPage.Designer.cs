@@ -34,6 +34,8 @@
             txtDelete = new TextBox();
             btnDelete = new Button();
             groupBox1 = new GroupBox();
+            label8 = new Label();
+            txtPhoneNumber = new TextBox();
             checkboxState = new CheckBox();
             cbxBloodType = new ComboBox();
             label4 = new Label();
@@ -52,8 +54,6 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
-            txtPhoneNumber = new TextBox();
-            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -130,6 +130,22 @@
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Yeni Üye";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(6, 138);
+            label8.Name = "label8";
+            label8.Size = new Size(45, 15);
+            label8.TabIndex = 21;
+            label8.Text = "Telefon";
+            // 
+            // txtPhoneNumber
+            // 
+            txtPhoneNumber.Location = new Point(82, 138);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(100, 23);
+            txtPhoneNumber.TabIndex = 20;
             // 
             // checkboxState
             // 
@@ -280,6 +296,7 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Üye Yönetimi";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // tabPage2
             // 
@@ -290,22 +307,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txtPhoneNumber
-            // 
-            txtPhoneNumber.Location = new Point(82, 138);
-            txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(100, 23);
-            txtPhoneNumber.TabIndex = 20;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(6, 138);
-            label8.Name = "label8";
-            label8.Size = new Size(45, 15);
-            label8.TabIndex = 21;
-            label8.Text = "Telefon";
             // 
             // MainPage
             // 

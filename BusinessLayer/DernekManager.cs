@@ -13,25 +13,29 @@ namespace BusinessLayer
 {
     public class DernekManager
     {
-
-        GenericRepository<Dernek> dernek = new GenericRepository<Dernek>();
+         DernekRepository dernekRepository = new DernekRepository();
 
         public DataTable ListAll()
         {
-            return dernek.ListAll();
+            DernekRepository repository = new DernekRepository();
+            return repository.ListAll();
         }
 
-        public void Insert(DataTable p)
+
+        public void Insert(Dernek entity)
         {
-            dernek.Insert(p);
+            DernekRepository repository = new DernekRepository();
+            repository.Insert(entity);
         }
 
-        public int DeleteById(int Id)
+        public void DeleteById(int id)
         {
-            dernek.DeleteById(Id);
-            
-            return 0;
+            dernekRepository.DeleteById(id);
         }
+
+
+
     }
+
 
 }

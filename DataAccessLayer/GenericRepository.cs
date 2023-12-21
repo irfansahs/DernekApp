@@ -12,8 +12,7 @@ namespace DataAccessLayer
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-
-
+        OleDbConnection connection = new OleDbConnection();
 
         public int DeleteAll()
         {
@@ -33,10 +32,8 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Insert(DataTable p)
+        public void Insert(T p)
         {
-            OleDbConnection connection = new OleDbConnection();
-
             string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\dernekproje\Dernek.accdb";
 
             connection.ConnectionString = connectionString;
@@ -51,7 +48,6 @@ namespace DataAccessLayer
         public DataTable ListAll()
         {
 
-            OleDbConnection connection = new OleDbConnection();
             string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\dernekproje\Dernek.accdb";
 
             connection.ConnectionString = connectionString;

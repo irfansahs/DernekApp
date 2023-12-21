@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace DataAccessLayer.Abstract
     {
         DataTable ListAll();
         T GetById(int id);
-        void Insert(DataTable p);
+        void Insert(T p);
         int Update(T p);
         int DeleteById(int id);
         int DeleteAll();
