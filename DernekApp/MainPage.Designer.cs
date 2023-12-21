@@ -54,10 +54,21 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
+            AidatGuncelle = new Button();
+            aidat = new TextBox();
+            AidatGridView2 = new DataGridView();
+            tabPage3 = new TabPage();
+            pdfal = new Button();
+            BorcluUyelereMailGonder = new Button();
+            BorcluUyelerGridView = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)AidatGridView2).BeginInit();
+            tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -276,6 +287,7 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
@@ -300,13 +312,87 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(AidatGuncelle);
+            tabPage2.Controls.Add(aidat);
+            tabPage2.Controls.Add(AidatGridView2);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(787, 582);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Aidat Yönetimi";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // AidatGuncelle
+            // 
+            AidatGuncelle.Location = new Point(464, 157);
+            AidatGuncelle.Name = "AidatGuncelle";
+            AidatGuncelle.Size = new Size(100, 23);
+            AidatGuncelle.TabIndex = 2;
+            AidatGuncelle.Text = "Güncelle";
+            AidatGuncelle.UseVisualStyleBackColor = true;
+            AidatGuncelle.Click += AidatGuncelle_Click;
+            // 
+            // aidat
+            // 
+            aidat.Location = new Point(464, 103);
+            aidat.Name = "aidat";
+            aidat.Size = new Size(100, 23);
+            aidat.TabIndex = 1;
+            // 
+            // AidatGridView2
+            // 
+            AidatGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AidatGridView2.Location = new Point(38, 38);
+            AidatGridView2.Name = "AidatGridView2";
+            AidatGridView2.RowTemplate.Height = 25;
+            AidatGridView2.Size = new Size(368, 346);
+            AidatGridView2.TabIndex = 0;
+            AidatGridView2.CellClick += AidatGridView2_CellClick;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(pdfal);
+            tabPage3.Controls.Add(BorcluUyelereMailGonder);
+            tabPage3.Controls.Add(BorcluUyelerGridView);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(787, 582);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Borclu Uyeler";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // pdfal
+            // 
+            pdfal.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            pdfal.Location = new Point(490, 278);
+            pdfal.Name = "pdfal";
+            pdfal.Size = new Size(166, 88);
+            pdfal.TabIndex = 2;
+            pdfal.Text = "PDF Olarak Al";
+            pdfal.UseVisualStyleBackColor = true;
+            pdfal.Click += pdfal_Click;
+            // 
+            // BorcluUyelereMailGonder
+            // 
+            BorcluUyelereMailGonder.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            BorcluUyelereMailGonder.Location = new Point(140, 293);
+            BorcluUyelereMailGonder.Name = "BorcluUyelereMailGonder";
+            BorcluUyelereMailGonder.Size = new Size(235, 63);
+            BorcluUyelereMailGonder.TabIndex = 1;
+            BorcluUyelereMailGonder.Text = "Borclu Kullanıcılara Mail Gönder";
+            BorcluUyelereMailGonder.UseVisualStyleBackColor = true;
+            BorcluUyelereMailGonder.Click += BorcluUyelereMailGonder_Click;
+            // 
+            // BorcluUyelerGridView
+            // 
+            BorcluUyelerGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BorcluUyelerGridView.Location = new Point(41, 41);
+            BorcluUyelerGridView.Name = "BorcluUyelerGridView";
+            BorcluUyelerGridView.RowTemplate.Height = 25;
+            BorcluUyelerGridView.Size = new Size(695, 200);
+            BorcluUyelerGridView.TabIndex = 0;
             // 
             // MainPage
             // 
@@ -323,6 +409,11 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)AidatGridView2).EndInit();
+            tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -354,5 +445,12 @@
         private TabPage tabPage2;
         private Label label8;
         private TextBox txtPhoneNumber;
+        private Button AidatGuncelle;
+        private TextBox aidat;
+        private DataGridView AidatGridView2;
+        private TabPage tabPage3;
+        private Button BorcluUyelereMailGonder;
+        private DataGridView BorcluUyelerGridView;
+        private Button pdfal;
     }
 }

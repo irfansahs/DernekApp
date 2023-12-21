@@ -1,98 +1,54 @@
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DernekApp.exe
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DernekApp.deps.json
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DernekApp.runtimeconfig.json
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DernekApp.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DernekApp.pdb
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\EntityLayer.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.pdb
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.pdb
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\EntityLayer.pdb
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.AssemblyReference.cache
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.Form1.resources
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.GenerateResource.cache
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfoInputs.cache
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfo.cs
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CopyComplete
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\refint\DernekApp.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.pdb
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.genruntimeconfig.cache
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\ref\DernekApp.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\System.Data.OleDb.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\DELL\Desktop\dernekproje\DernekApp\obj\Debug\net6.0-windows\DernekApp.sourcelink.json
-<<<<<<< HEAD
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.AssemblyReference.cache
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.Form1.resources
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.MainPage.resources
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.GenerateResource.cache
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfoInputs.cache
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfo.cs
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.sourcelink.json
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\refint\DernekApp.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.pdb
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DernekApp.exe
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DernekApp.deps.json
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DernekApp.runtimeconfig.json
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DernekApp.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DernekApp.pdb
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\System.Data.OleDb.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\EntityLayer.dll
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.pdb
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.pdb
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\bin\Debug\net6.0-windows\EntityLayer.pdb
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CopyComplete
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\DernekApp.genruntimeconfig.cache
-C:\Users\DELL\Desktop\Görsel Finalll\DernekApp\obj\Debug\net6.0-windows\ref\DernekApp.dll
-=======
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DernekApp.exe
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DernekApp.deps.json
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DernekApp.runtimeconfig.json
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DernekApp.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DernekApp.pdb
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\System.Data.OleDb.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\EntityLayer.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.pdb
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.pdb
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\EntityLayer.pdb
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.AssemblyReference.cache
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.Form1.resources
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.MainPage.resources
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.GenerateResource.cache
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfoInputs.cache
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfo.cs
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CoreCompileInputs.cache
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.sourcelink.json
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CopyComplete
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\refint\DernekApp.dll
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.pdb
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.genruntimeconfig.cache
-C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\ref\DernekApp.dll
->>>>>>> 3638d8b66919facff4a02d47231d43428095c32b
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DernekApp.exe
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DernekApp.deps.json
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DernekApp.runtimeconfig.json
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DernekApp.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DernekApp.pdb
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\EntityLayer.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\BusinessLayer.pdb
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\DataAccessLayer.pdb
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\EntityLayer.pdb
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.Form1.resources
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.MainPage.resources
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.AssemblyInfo.cs
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.sourcelink.json
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.csproj.CopyComplete
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\refint\DernekApp.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.pdb
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\DernekApp.genruntimeconfig.cache
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\obj\Debug\net6.0-windows\ref\DernekApp.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.barcodes.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.bouncy-castle-connector.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.forms.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.io.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.kernel.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.layout.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.pdfa.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.sign.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.styledxmlparser.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.svg.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itext.commons.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
