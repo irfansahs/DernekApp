@@ -55,6 +55,7 @@ namespace DataAccessLayer
 
                     insertCommand.ExecuteNonQuery();
                 }
+                ListAll();
             }
         }
 

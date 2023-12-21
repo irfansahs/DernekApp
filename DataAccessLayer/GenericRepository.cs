@@ -32,21 +32,11 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Insert(T p)
-        {
-<<<<<<< HEAD
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\dernekproje\Dernek.accdb";
+        public void Insert(T p) { 
 
-            connection.ConnectionString = connectionString;
-
-            connection.Open();
-            string insertQuery = "INSERT INTO dernektablosu (alan1, alan2, alan3) VALUES ('a','b','c')";
-=======
-            OleDbConnection connection= new OleDbConnection();
-            
+            OleDbConnection connection= new OleDbConnection();  
             string insertQuery = "INSERT INTO uyeTablosu (alan1, alan2, alan3) VALUES ('a','b','c')";
-            
->>>>>>> 3638d8b66919facff4a02d47231d43428095c32b
+
             OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection);
             insertCommand.ExecuteNonQuery();
             connection.Close();
@@ -54,12 +44,8 @@ namespace DataAccessLayer
 
         public DataTable ListAll()
         {
-
-<<<<<<< HEAD
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\dernekproje\Dernek.accdb";
-=======
             OleDbConnection connection = new OleDbConnection();
->>>>>>> 3638d8b66919facff4a02d47231d43428095c32b
+
 
             string query = "SELECT * FROM uyeTablosu";
 
