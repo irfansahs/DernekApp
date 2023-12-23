@@ -74,6 +74,31 @@ namespace DataAccessLayer
             }
         }
 
+        public DataTable Search(string ad, string soyad, string kanGrubu)
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string query = "SELECT * FROM uyeTablosu WHERE 1 = 1";
+
+                query += (!string.IsNullOrEmpty(ad)) ? " AND Ad LIKE @ad" : "";
+                query += (!string.IsNullOrEmpty(soyad)) ? " AND Soyad LIKE @soyad" : "";
+                query += (!string.IsNullOrEmpty(kanGrubu)) ? " AND KanGrubu = @kanGrubu" : "";
+
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
+                    adapter.SelectCommand.Parameters.AddWithValue("@ad", $"%{ad}%");
+                    adapter.SelectCommand.Parameters.AddWithValue("@soyad", $"%{soyad}%");
+                    adapter.SelectCommand.Parameters.AddWithValue("@kanGrubu", kanGrubu);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+        }
+
+
+
         public int Update(Dernek entity)
         {
             throw new NotImplementedException();

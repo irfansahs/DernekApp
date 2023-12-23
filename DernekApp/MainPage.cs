@@ -20,6 +20,7 @@ namespace DernekApp
     {
         DernekManager dm = new DernekManager();
         AidatManager am = new AidatManager();
+        UyeManager um = new UyeManager();
 
         public MainPage()
         {
@@ -87,13 +88,14 @@ namespace DernekApp
 
         private void BorcluUyelereMailGonder_Click(object sender, EventArgs e)
         {
+
             EmailMessage email = new EmailMessage
             {
                 FromAddress = "gonderen@example.com",
                 Password = "gonderenin_sifresi",
                 ToAddress = "black969691@gmail.com",
-                Subject = "Konu",
-                Body = "Merhaba, bu bir test e-postasýdýr."
+                Subject = MailSubject.Text,
+                Body = MailBody.Text
             };
 
             try
@@ -166,5 +168,14 @@ namespace DernekApp
             MessageBox.Show("PDF dosyasý oluþturuldu: " + pdfFilePath);
         }
 
+        private void Search_Click(object sender, EventArgs e)
+        {
+            SearchGridView.DataSource = um.Search("Ahmet", "Kemal", "");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            SearchGridView.DataSource = um.Search("Ahmet", "Kemal", "");// getById ile borclu olan uyenin aidatlarýný göstereceðiz
+        }
     }
 }

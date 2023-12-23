@@ -58,9 +58,19 @@
             aidat = new TextBox();
             AidatGridView2 = new DataGridView();
             tabPage3 = new TabPage();
+            MailBody = new RichTextBox();
+            MailSubject = new TextBox();
+            label10 = new Label();
+            label9 = new Label();
             pdfal = new Button();
             BorcluUyelereMailGonder = new Button();
             BorcluUyelerGridView = new DataGridView();
+            tabPage4 = new TabPage();
+            Search = new Button();
+            SearchGridView = new DataGridView();
+            label11 = new Label();
+            textBox1 = new TextBox();
+            BorcluUyeyiGoster = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -69,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)AidatGridView2).BeginInit();
             tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).BeginInit();
+            tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SearchGridView).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -288,6 +300,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
@@ -352,6 +365,13 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(BorcluUyeyiGoster);
+            tabPage3.Controls.Add(textBox1);
+            tabPage3.Controls.Add(label11);
+            tabPage3.Controls.Add(MailBody);
+            tabPage3.Controls.Add(MailSubject);
+            tabPage3.Controls.Add(label10);
+            tabPage3.Controls.Add(label9);
             tabPage3.Controls.Add(pdfal);
             tabPage3.Controls.Add(BorcluUyelereMailGonder);
             tabPage3.Controls.Add(BorcluUyelerGridView);
@@ -363,12 +383,45 @@
             tabPage3.Text = "Borclu Uyeler";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // MailBody
+            // 
+            MailBody.Location = new Point(156, 344);
+            MailBody.Name = "MailBody";
+            MailBody.Size = new Size(196, 77);
+            MailBody.TabIndex = 6;
+            MailBody.Text = "";
+            // 
+            // MailSubject
+            // 
+            MailSubject.Location = new Point(156, 275);
+            MailSubject.Name = "MailSubject";
+            MailSubject.Size = new Size(196, 23);
+            MailSubject.TabIndex = 5;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(83, 376);
+            label10.Name = "label10";
+            label10.Size = new Size(65, 15);
+            label10.TabIndex = 4;
+            label10.Text = "Mail İçeriği";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(83, 278);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 15);
+            label9.TabIndex = 3;
+            label9.Text = "Mail Başlığı";
+            // 
             // pdfal
             // 
             pdfal.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            pdfal.Location = new Point(490, 278);
+            pdfal.Location = new Point(490, 461);
             pdfal.Name = "pdfal";
-            pdfal.Size = new Size(166, 88);
+            pdfal.Size = new Size(173, 63);
             pdfal.TabIndex = 2;
             pdfal.Text = "PDF Olarak Al";
             pdfal.UseVisualStyleBackColor = true;
@@ -377,7 +430,7 @@
             // BorcluUyelereMailGonder
             // 
             BorcluUyelereMailGonder.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            BorcluUyelereMailGonder.Location = new Point(140, 293);
+            BorcluUyelereMailGonder.Location = new Point(134, 461);
             BorcluUyelereMailGonder.Name = "BorcluUyelereMailGonder";
             BorcluUyelereMailGonder.Size = new Size(235, 63);
             BorcluUyelereMailGonder.TabIndex = 1;
@@ -393,6 +446,62 @@
             BorcluUyelerGridView.RowTemplate.Height = 25;
             BorcluUyelerGridView.Size = new Size(695, 200);
             BorcluUyelerGridView.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(Search);
+            tabPage4.Controls.Add(SearchGridView);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(787, 582);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Sorgu Ekranı";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // Search
+            // 
+            Search.Location = new Point(486, 328);
+            Search.Name = "Search";
+            Search.Size = new Size(149, 56);
+            Search.TabIndex = 1;
+            Search.Text = "Sorgula";
+            Search.UseVisualStyleBackColor = true;
+            Search.Click += Search_Click;
+            // 
+            // SearchGridView
+            // 
+            SearchGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SearchGridView.Location = new Point(72, 54);
+            SearchGridView.Name = "SearchGridView";
+            SearchGridView.RowTemplate.Height = 25;
+            SearchGridView.Size = new Size(639, 160);
+            SearchGridView.TabIndex = 0;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(490, 278);
+            label11.Name = "label11";
+            label11.Size = new Size(46, 15);
+            label11.TabIndex = 7;
+            label11.Text = "Uye No";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(542, 275);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(121, 23);
+            textBox1.TabIndex = 8;
+            // 
+            // BorcluUyeyiGoster
+            // 
+            BorcluUyeyiGoster.Location = new Point(490, 344);
+            BorcluUyeyiGoster.Name = "BorcluUyeyiGoster";
+            BorcluUyeyiGoster.Size = new Size(173, 39);
+            BorcluUyeyiGoster.TabIndex = 9;
+            BorcluUyeyiGoster.Text = "Boru Olan Uyeyi Göster";
+            BorcluUyeyiGoster.UseVisualStyleBackColor = true;
+            BorcluUyeyiGoster.Click += button1_Click_1;
             // 
             // MainPage
             // 
@@ -413,7 +522,10 @@
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)AidatGridView2).EndInit();
             tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).EndInit();
+            tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)SearchGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -452,5 +564,15 @@
         private Button BorcluUyelereMailGonder;
         private DataGridView BorcluUyelerGridView;
         private Button pdfal;
+        private TabPage tabPage4;
+        private Button Search;
+        private DataGridView SearchGridView;
+        private RichTextBox MailBody;
+        private TextBox MailSubject;
+        private Label label10;
+        private Label label9;
+        private Button BorcluUyeyiGoster;
+        private TextBox textBox1;
+        private Label label11;
     }
 }

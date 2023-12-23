@@ -21,6 +21,12 @@ namespace BusinessLayer
             return repository.ListAll();
         }
 
+        public DataTable Search(string ad, string soyad, string kanGrubu)
+        {
+            DernekRepository dernekRepository = new DernekRepository();
+            return dernekRepository.Search(ad, soyad, kanGrubu);
+        }
+
 
         public void Insert(Dernek entity)
         {

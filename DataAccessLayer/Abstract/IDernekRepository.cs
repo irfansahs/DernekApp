@@ -12,6 +12,7 @@ namespace DataAccessLayer.Abstract
     {
         void Insert(Dernek entity);
         DataTable ListAll();
+        DataTable Search(string ad, string soyad, string kanGrubu);
         Dernek GetById(int id);
         int Update(Dernek entity);
         void DeleteById(int id);
