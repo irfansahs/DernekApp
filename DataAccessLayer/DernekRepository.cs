@@ -40,19 +40,22 @@ namespace DataAccessLayer
         {
             using (OleDbConnection connection = Context.GetConnection())
             {
+
+
                 string insertQuery = "INSERT INTO uyeTablosu (tc, isim, soyisim, dogTarih, sehir, kanGrubu, durum) " +
                      "VALUES (@tc, @isim, @soyisim, @dogTarih, @sehir, @kanGrubu, @durum)";
 
                 using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
                 {
                     insertCommand.Parameters.AddWithValue("@tc", entity.tc);
+                /*
                     insertCommand.Parameters.AddWithValue("@isim", entity.isim);
                     insertCommand.Parameters.AddWithValue("@soyisim", entity.soyisim);
                     insertCommand.Parameters.Add("@dogTarih", "2023-12-20");
                     insertCommand.Parameters.AddWithValue("@sehir", entity.sehir);
                     insertCommand.Parameters.AddWithValue("@kanGrubu", entity.kanGrubu);
                     insertCommand.Parameters.AddWithValue("@durum", entity.durum);
-
+                */
                     insertCommand.ExecuteNonQuery();
                 }
                 ListAll();

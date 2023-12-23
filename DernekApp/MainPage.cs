@@ -27,28 +27,32 @@ namespace DernekApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void yenile()
         {
             dataGridView1.DataSource = dm.ListAll();
             AidatGridView2.DataSource = am.ListAll();
             BorcluUyelerGridView.DataSource = dm.ListAll();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            yenile();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-            Dernek dernek = new Dernek
+            Uye uye = new Uye
             {
                 tc = txtSecNumber.Text,
                 isim = txtName.Text,
                 soyisim = txtSurname.Text,
                 sehir = txtCity.Text,
-                kanGrubu = txtCity.Text,
+                kanGrubu = cbxBloodType.Text,
+                dogTarih = DateTime.Parse(BirthDay.Text),
+                durum = checkboxState.Checked,
             };
 
-
-            dm.Insert(dernek);
+            um.Insert(uye);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -170,12 +174,24 @@ namespace DernekApp
 
         private void Search_Click(object sender, EventArgs e)
         {
+
+            var bloodType = BloodType.SelectedIndex;
+
+            var city = City.Text;
+
+            bool durum = status.Checked;
+
             SearchGridView.DataSource = um.Search("Ahmet", "Kemal", "");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             SearchGridView.DataSource = um.Search("Ahmet", "Kemal", "");// getById ile borclu olan uyenin aidatlarýný göstereceðiz
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

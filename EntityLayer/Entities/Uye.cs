@@ -15,7 +15,7 @@ namespace EntityLayer.Entities
         public string isim { get; set; }
         public string soyisim { get; set; }
         public string sehir { get; set; }
-        public DateOnly dogTarih { get; set; }
+        public DateTime dogTarih { get; set; }
         public string kanGrubu { get; set; }
         public bool durum { get; set; }
     }

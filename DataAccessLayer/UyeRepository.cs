@@ -29,7 +29,23 @@ namespace DataAccessLayer
 
         public void Insert(Uye uye)
         {
-            throw new NotImplementedException();
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string insertQuery = "INSERT INTO uyeTablosu (tc, isim, soyisim, dogTarih, sehir, kanGrubu, durum) " +
+                     "VALUES (@tc, @isim, @soyisim, @dogTarih, @sehir, @kanGrubu, @durum)";
+
+                using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
+                {
+                    insertCommand.Parameters.AddWithValue("@tc", uye.tc);
+                    insertCommand.Parameters.AddWithValue("@isim", uye.isim);
+                    insertCommand.Parameters.AddWithValue("@soyisim", uye.soyisim);
+                    insertCommand.Parameters.Add("@dogTarih", uye.dogTarih);
+                    insertCommand.Parameters.AddWithValue("@sehir", uye.sehir);
+                    insertCommand.Parameters.AddWithValue("@kanGrubu", uye.kanGrubu);
+                    insertCommand.Parameters.AddWithValue("@durum", uye.durum);
+                    insertCommand.ExecuteNonQuery();
+                }
+            }
         }
 
         public DataTable ListAll()

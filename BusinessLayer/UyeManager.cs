@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using EntityLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,6 +16,12 @@ namespace BusinessLayer
         {
             UyeRepository uyeRepository = new UyeRepository();
             return uyeRepository.Search(isim, soyisim, kanGrubu);
+        }
+
+        public void Insert(Uye uye)
+        {
+            UyeRepository uyeRepository = new UyeRepository();
+            uyeRepository.Insert(uye);
         }
 
     }

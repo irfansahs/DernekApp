@@ -34,6 +34,7 @@
             txtDelete = new TextBox();
             btnDelete = new Button();
             groupBox1 = new GroupBox();
+            BirthDay = new DateTimePicker();
             label8 = new Label();
             txtPhoneNumber = new TextBox();
             checkboxState = new CheckBox();
@@ -58,6 +59,9 @@
             aidat = new TextBox();
             AidatGridView2 = new DataGridView();
             tabPage3 = new TabPage();
+            BorcluUyeyiGoster = new Button();
+            textBox1 = new TextBox();
+            label11 = new Label();
             MailBody = new RichTextBox();
             MailSubject = new TextBox();
             label10 = new Label();
@@ -66,11 +70,14 @@
             BorcluUyelereMailGonder = new Button();
             BorcluUyelerGridView = new DataGridView();
             tabPage4 = new TabPage();
+            status = new CheckBox();
+            City = new TextBox();
+            label13 = new Label();
+            label12 = new Label();
+            BloodType = new ComboBox();
             Search = new Button();
             SearchGridView = new DataGridView();
-            label11 = new Label();
-            textBox1 = new TextBox();
-            BorcluUyeyiGoster = new Button();
+            tabPage5 = new TabPage();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -94,7 +101,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(210, 159);
+            btnAdd.Location = new Point(278, 207);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 1;
@@ -111,16 +118,16 @@
             // 
             // txtDelete
             // 
-            txtDelete.Location = new Point(635, 224);
+            txtDelete.Location = new Point(624, 226);
             txtDelete.Name = "txtDelete";
-            txtDelete.Size = new Size(46, 23);
+            txtDelete.Size = new Size(78, 23);
             txtDelete.TabIndex = 3;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(595, 224);
+            btnDelete.Location = new Point(624, 261);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(34, 20);
+            btnDelete.Size = new Size(78, 28);
             btnDelete.TabIndex = 4;
             btnDelete.Text = "Sil";
             btnDelete.UseVisualStyleBackColor = true;
@@ -128,6 +135,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(BirthDay);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(txtPhoneNumber);
             groupBox1.Controls.Add(checkboxState);
@@ -149,10 +157,18 @@
             groupBox1.Controls.Add(txtName);
             groupBox1.Location = new Point(6, 204);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(527, 209);
+            groupBox1.Size = new Size(514, 294);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Yeni Üye";
+            // 
+            // BirthDay
+            // 
+            BirthDay.CustomFormat = "Short";
+            BirthDay.Location = new Point(278, 157);
+            BirthDay.Name = "BirthDay";
+            BirthDay.Size = new Size(200, 23);
+            BirthDay.TabIndex = 22;
             // 
             // label8
             // 
@@ -183,6 +199,7 @@
             // cbxBloodType
             // 
             cbxBloodType.FormattingEnabled = true;
+            cbxBloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-" });
             cbxBloodType.Location = new Point(354, 54);
             cbxBloodType.Name = "cbxBloodType";
             cbxBloodType.Size = new Size(100, 23);
@@ -301,11 +318,12 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(795, 610);
+            tabControl1.Size = new Size(829, 615);
             tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -317,7 +335,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(787, 582);
+            tabPage1.Size = new Size(813, 482);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Üye Yönetimi";
             tabPage1.UseVisualStyleBackColor = true;
@@ -331,7 +349,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(787, 582);
+            tabPage2.Size = new Size(813, 482);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Aidat Yönetimi";
             tabPage2.UseVisualStyleBackColor = true;
@@ -378,10 +396,36 @@
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(787, 582);
+            tabPage3.Size = new Size(821, 587);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Borclu Uyeler";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // BorcluUyeyiGoster
+            // 
+            BorcluUyeyiGoster.Location = new Point(490, 344);
+            BorcluUyeyiGoster.Name = "BorcluUyeyiGoster";
+            BorcluUyeyiGoster.Size = new Size(173, 39);
+            BorcluUyeyiGoster.TabIndex = 9;
+            BorcluUyeyiGoster.Text = "Boru Olan Uyeyi Göster";
+            BorcluUyeyiGoster.UseVisualStyleBackColor = true;
+            BorcluUyeyiGoster.Click += button1_Click_1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(542, 275);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(121, 23);
+            textBox1.TabIndex = 8;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(490, 278);
+            label11.Name = "label11";
+            label11.Size = new Size(46, 15);
+            label11.TabIndex = 7;
+            label11.Text = "Uye No";
             // 
             // MailBody
             // 
@@ -449,6 +493,11 @@
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(status);
+            tabPage4.Controls.Add(City);
+            tabPage4.Controls.Add(label13);
+            tabPage4.Controls.Add(label12);
+            tabPage4.Controls.Add(BloodType);
             tabPage4.Controls.Add(Search);
             tabPage4.Controls.Add(SearchGridView);
             tabPage4.Location = new Point(4, 24);
@@ -457,10 +506,63 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Sorgu Ekranı";
             tabPage4.UseVisualStyleBackColor = true;
+            tabPage4.Click += tabPage4_Click;
+            // 
+            // status
+            // 
+            status.AutoSize = true;
+            status.Checked = true;
+            status.CheckState = CheckState.Checked;
+            status.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            status.Location = new Point(178, 384);
+            status.Name = "status";
+            status.Size = new Size(89, 29);
+            status.TabIndex = 7;
+            status.Text = "Durum";
+            status.UseVisualStyleBackColor = true;
+            // 
+            // City
+            // 
+            City.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            City.Location = new Point(178, 336);
+            City.Name = "City";
+            City.Size = new Size(121, 33);
+            City.TabIndex = 5;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(117, 339);
+            label13.Name = "label13";
+            label13.Size = new Size(55, 25);
+            label13.TabIndex = 4;
+            label13.Text = "Şehir";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(128, 293);
+            label12.Name = "label12";
+            label12.Size = new Size(44, 25);
+            label12.TabIndex = 3;
+            label12.Text = "Kan";
+            // 
+            // BloodType
+            // 
+            BloodType.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            BloodType.FormattingEnabled = true;
+            BloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-" });
+            BloodType.Location = new Point(178, 290);
+            BloodType.Name = "BloodType";
+            BloodType.Size = new Size(121, 33);
+            BloodType.TabIndex = 2;
             // 
             // Search
             // 
-            Search.Location = new Point(486, 328);
+            Search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Search.Location = new Point(469, 313);
             Search.Name = "Search";
             Search.Size = new Size(149, 56);
             Search.TabIndex = 1;
@@ -477,37 +579,21 @@
             SearchGridView.Size = new Size(639, 160);
             SearchGridView.TabIndex = 0;
             // 
-            // label11
+            // tabPage5
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(490, 278);
-            label11.Name = "label11";
-            label11.Size = new Size(46, 15);
-            label11.TabIndex = 7;
-            label11.Text = "Uye No";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(542, 275);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(121, 23);
-            textBox1.TabIndex = 8;
-            // 
-            // BorcluUyeyiGoster
-            // 
-            BorcluUyeyiGoster.Location = new Point(490, 344);
-            BorcluUyeyiGoster.Name = "BorcluUyeyiGoster";
-            BorcluUyeyiGoster.Size = new Size(173, 39);
-            BorcluUyeyiGoster.TabIndex = 9;
-            BorcluUyeyiGoster.Text = "Boru Olan Uyeyi Göster";
-            BorcluUyeyiGoster.UseVisualStyleBackColor = true;
-            BorcluUyeyiGoster.Click += button1_Click_1;
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(813, 482);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Grafikler";
+            tabPage5.UseVisualStyleBackColor = true;
             // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(795, 610);
+            ClientSize = new Size(829, 615);
             Controls.Add(tabControl1);
             Name = "MainPage";
             Text = "Form1";
@@ -525,6 +611,7 @@
             tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).EndInit();
             tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SearchGridView).EndInit();
             ResumeLayout(false);
         }
@@ -574,5 +661,12 @@
         private Button BorcluUyeyiGoster;
         private TextBox textBox1;
         private Label label11;
+        private Label label12;
+        private ComboBox BloodType;
+        private TextBox City;
+        private Label label13;
+        private CheckBox status;
+        private DateTimePicker BirthDay;
+        private TabPage tabPage5;
     }
 }
