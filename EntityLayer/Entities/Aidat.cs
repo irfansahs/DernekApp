@@ -11,7 +11,7 @@ namespace EntityLayer.Entities
     {
         [Key]
         public int Id { get; set; }
-        public DateOnly Aylar { get; set; }
+        public DateOnly aylar { get; set; }
         public int aidat { get; set; }
     }
 }

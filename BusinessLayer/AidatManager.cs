@@ -11,17 +11,16 @@ namespace BusinessLayer
 {
     public class AidatManager
     {
+        AidatRepository AidatRepository = new AidatRepository();
 
         public DataTable ListAll()
         {
-            AidatRepository AidatRepository = new AidatRepository();
 
             return AidatRepository.ListAll();
         }
 
         public void Update(Aidat aidat)
         {
-            AidatRepository AidatRepository = new AidatRepository();
             AidatRepository.Update(aidat);
         }
 

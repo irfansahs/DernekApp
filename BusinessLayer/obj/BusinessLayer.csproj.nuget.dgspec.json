@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\selcu.SELCUK.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\GörselDernek\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -57,6 +62,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -66,17 +85,21 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\GörselDernek\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\selcu.SELCUK.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,14 +107,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -122,6 +146,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -131,17 +169,21 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\selcu.SELCUK.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -149,6 +191,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -177,6 +220,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

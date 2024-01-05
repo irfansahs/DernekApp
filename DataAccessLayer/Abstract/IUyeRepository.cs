@@ -12,7 +12,9 @@ namespace DataAccessLayer.Abstract
     {
         void Insert(Uye uye);
         DataTable ListAll();
-        DataTable Search(string isim, string soyisim, string kanGrubu);
+        DataTable SearchByBloodTypeAndStatus(string kanGrubu,bool durum);
+        DataTable SearchByCityAndStatus(string sehir, bool durum);
+
         Dernek GetById(int id);
         int Update(Uye uye);
         void DeleteById(int id);

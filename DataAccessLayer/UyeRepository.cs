@@ -17,10 +17,7 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void DeleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public Dernek GetById(int id)
         {
@@ -31,47 +28,99 @@ namespace DataAccessLayer
         {
             using (OleDbConnection connection = Context.GetConnection())
             {
-                string insertQuery = "INSERT INTO uyeTablosu (tc, isim, soyisim, dogTarih, sehir, kanGrubu, durum) " +
-                     "VALUES (@tc, @isim, @soyisim, @dogTarih, @sehir, @kanGrubu, @durum)";
+                string insertQuery = "INSERT INTO uyeTablosu (tc, isim, soyisim,email, dogTarih, sehir, kanGrubu, durum) " +
+                     "VALUES (@tc, @isim, @soyisim, @email, @dogTarih, @sehir, @kanGrubu, @durum)";
 
                 using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
                 {
-                    insertCommand.Parameters.AddWithValue("@tc", uye.tc);
-                    insertCommand.Parameters.AddWithValue("@isim", uye.isim);
-                    insertCommand.Parameters.AddWithValue("@soyisim", uye.soyisim);
-                    insertCommand.Parameters.Add("@dogTarih", uye.dogTarih);
-                    insertCommand.Parameters.AddWithValue("@sehir", uye.sehir);
-                    insertCommand.Parameters.AddWithValue("@kanGrubu", uye.kanGrubu);
-                    insertCommand.Parameters.AddWithValue("@durum", uye.durum);
-                    insertCommand.ExecuteNonQuery();
+                    try
+                    {
+                        insertCommand.Parameters.AddWithValue("@tc", uye.tc);
+                        insertCommand.Parameters.AddWithValue("@isim", uye.isim);
+                        insertCommand.Parameters.AddWithValue("@soyisim", uye.soyisim);
+                        insertCommand.Parameters.AddWithValue("@email", uye.email);
+                        insertCommand.Parameters.Add("@dogTarih", uye.dogTarih);
+                        insertCommand.Parameters.AddWithValue("@sehir", uye.sehir);
+                        insertCommand.Parameters.AddWithValue("@kanGrubu", uye.kanGrubu);
+                        insertCommand.Parameters.AddWithValue("@durum", uye.durum);
+                        insertCommand.ExecuteNonQuery();
+
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
                 }
             }
         }
 
         public DataTable ListAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public DataTable Search(string isim, string soyisim, string kanGrubu)
-        {
             using (OleDbConnection connection = Context.GetConnection())
             {
-                string query = "SELECT * FROM uyeTablosu WHERE 1 = 1";
-
-                query += (!string.IsNullOrEmpty(isim)) ? " AND isim LIKE @isim" : "";
-                query += (!string.IsNullOrEmpty(soyisim)) ? " AND soyisim LIKE @soyisim" : "";
-                query += (!string.IsNullOrEmpty(kanGrubu)) ? " AND KanGrubu = @kanGrubu" : "";
+                string query = "SELECT * FROM uyeTablosu";
 
                 using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
                 {
-                    adapter.SelectCommand.Parameters.AddWithValue("@isim", $"%{isim}%");
-                    adapter.SelectCommand.Parameters.AddWithValue("@soyisim", $"%{soyisim}%");
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+
+            }
+        }
+        public DataTable SearchByBloodTypeAndStatus(string kanGrubu, bool durum)
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string query = "SELECT * FROM uyeTablosu WHERE kanGrubu = @kanGrubu AND Durum = @durum";
+
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
                     adapter.SelectCommand.Parameters.AddWithValue("@kanGrubu", kanGrubu);
+                    adapter.SelectCommand.Parameters.AddWithValue("@durum", durum);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
                     return dataTable;
+                }
+            }
+        }
+
+        public DataTable SearchByCityAndStatus(string sehir, bool durum)
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string query = "SELECT * FROM uyeTablosu WHERE sehir LIKE @sehir AND Durum = @durum";
+
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
+                    adapter.SelectCommand.Parameters.AddWithValue("@sehir", "%" + sehir + "%");
+                    adapter.SelectCommand.Parameters.AddWithValue("@durum", durum);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+        }
+
+
+        public DataTable Search(string isim, string soyisim, string kanGrubu)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteById(int id)
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string insertQuery = $"DELETE FROM uyeTablosu WHERE Kimlik={id}";
+
+                using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
+                {
+                    insertCommand.ExecuteNonQuery();
                 }
             }
         }

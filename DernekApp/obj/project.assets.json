@@ -1457,6 +1457,18 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "ZedGraph6/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/ZedGraph6.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ZedGraph6.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "BusinessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -4918,6 +4930,21 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "ZedGraph6/6.0.0": {
+      "sha512": "Ub3xq8TtokXdIFl+ATfhCdWtA7hg9wpcpW1l+MJ0zIZWatDPN2BO4xx2zeF/H6wwr5NKYViT1U3q9qCuu1Mh+Q==",
+      "type": "package",
+      "path": "zedgraph6/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "ZG6icon.png",
+        "lib/net6.0-windows7.0/ZedGraph6.dll",
+        "zedgraph6.6.0.0.nupkg.sha512",
+        "zedgraph6.nuspec"
+      ]
+    },
     "BusinessLayer/1.0.0": {
       "type": "project",
       "path": "../BusinessLayer/BusinessLayer.csproj",
@@ -4937,24 +4964,30 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "BusinessLayer >= 1.0.0",
+      "ZedGraph6 >= 6.0.0",
       "iTextSharp >= 5.5.13.3",
       "itext7 >= 8.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DernekApp\\DernekApp.csproj",
+      "projectUniqueName": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DernekApp\\DernekApp.csproj",
       "projectName": "DernekApp",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DernekApp\\DernekApp.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\DernekApp\\obj\\",
+      "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DernekApp\\DernekApp.csproj",
+      "packagesPath": "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\DernekApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\selcu.SELCUK.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4962,14 +4995,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }
@@ -4984,6 +5018,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "ZedGraph6": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "iTextSharp": {
             "target": "Package",
             "version": "[5.5.13.3, )"
@@ -5004,6 +5042,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

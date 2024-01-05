@@ -12,6 +12,11 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using iText.Layout.Element;
+using iTextSharp.text;
+using static System.Net.WebRequestMethods;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
+using ZedGraph;
+using System.ComponentModel;
 
 
 namespace DernekApp
@@ -25,13 +30,15 @@ namespace DernekApp
         public MainPage()
         {
             InitializeComponent();
+
         }
 
         public void yenile()
         {
-            dataGridView1.DataSource = dm.ListAll();
+            dataGridView1.DataSource = um.ListAll();
             AidatGridView2.DataSource = am.ListAll();
             BorcluUyelerGridView.DataSource = dm.ListAll();
+            SearchGridView.DataSource = um.ListAll();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,20 +53,51 @@ namespace DernekApp
                 tc = txtSecNumber.Text,
                 isim = txtName.Text,
                 soyisim = txtSurname.Text,
+                email = txtEmail.Text,
                 sehir = txtCity.Text,
                 kanGrubu = cbxBloodType.Text,
                 dogTarih = DateTime.Parse(BirthDay.Text),
                 durum = checkboxState.Checked,
             };
+            Dernek borcListesi = new Dernek
+            {
+                tc = txtSecNumber.Text,
+                email = txtEmail.Text
+            };
+            try
+            {
+                um.Insert(uye);
+                dm.Insert(borcListesi);
 
-            um.Insert(uye);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            dataGridView1.DataSource = um.ListAll();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtDelete.Text);
 
-            dm.DeleteById(id);
+            try
+            {
+                int id = Convert.ToInt32(txtDelete.Text);
+                dm.DeleteById(id);
+
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Üye silerken hata oluþtu. Lütfen üyenin ID'sini doðru girin!");
+            }
+            dataGridView1.DataSource = um.ListAll();
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -70,12 +108,12 @@ namespace DernekApp
         private void AidatGuncelle_Click(object sender, EventArgs e)
         {
 
-            aidat.Text = "awd";
 
             Aidat a = new Aidat
             {
-                aidat = 100,
+                aidat = Int32.Parse(txtAidat.Text)
             };
+
 
             am.Update(a);
         }
@@ -83,11 +121,7 @@ namespace DernekApp
         private void AidatGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = this.AidatGridView2.Rows[e.RowIndex];
-
-            aidat.Text = row.Cells["aidat"].Value.ToString();
-
-
-
+            txtAidat.Text = row.Cells["aidat"].Value.ToString();
         }
 
         private void BorcluUyelereMailGonder_Click(object sender, EventArgs e)
@@ -117,81 +151,139 @@ namespace DernekApp
 
         private static void ExportDataTableToPdf(DataTable dataTable, string filePath)
         {
-            /*
-            using (PdfWriter writer = new PdfWriter(filePath))
-            using (PdfDocument pdf = new PdfDocument(writer))
-            using (Document document = new Document(pdf))
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
             {
-                Table table = new Table(dataTable.Columns.Count);
-
-                // Ýlk satýr baþlýk olacak
-                foreach (DataColumn column in dataTable.Columns)
+                using (iTextSharp.text.Document document = new iTextSharp.text.Document())
                 {
-                    table.AddHeaderCell(new Cell().Add(new Paragraph(column.ColumnName)));
-                }
+                    PdfWriter writer = PdfWriter.GetInstance(document, stream);
 
-                // Diðer satýrlar verileri içerecek
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    foreach (var item in row.ItemArray)
+                    document.Open();
+                    PdfPTable pdfTable = new PdfPTable(dataTable.Columns.Count);
+
+                    foreach (DataColumn column in dataTable.Columns)
                     {
-                        table.AddCell(new Cell().Add(new Paragraph(item.ToString())));
+                        pdfTable.AddCell(new Phrase(column.ColumnName));
                     }
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        foreach (var item in row.ItemArray)
+                        {
+                            pdfTable.AddCell(new Phrase(item.ToString()));
+                        }
+                    }
+
+                    document.Add(pdfTable);
+                    document.Close();
                 }
-
-                // Tabloyu belgeye ekle
-                pdf.Add((iTextSharp.text.IElement)table);
             }
-            */
-
         }
 
         private void pdfal_Click(object sender, EventArgs e)
         {
-            // DataGridView'daki verileri bir DataTable'a al
             DataTable dataTable = new DataTable();
             foreach (DataGridViewColumn column in BorcluUyelerGridView.Columns)
             {
-                dataTable.Columns.Add(column.HeaderText, column.ValueType);
+                dataTable.Columns.Add(column.HeaderText, typeof(string));
             }
 
             foreach (DataGridViewRow row in BorcluUyelerGridView.Rows)
             {
+                if (row.IsNewRow) continue;
                 DataRow dataRow = dataTable.NewRow();
-                foreach (DataGridViewCell cell in row.Cells)
+                for (int i = 0; i < row.Cells.Count; i++)
                 {
-                    dataRow[cell.ColumnIndex] = cell.Value;
+                    dataRow[i] = row.Cells[i].Value?.ToString() ?? "";
                 }
                 dataTable.Rows.Add(dataRow);
             }
 
-            // DataTable'ý PDF'e dönüþtür
-            string pdfFilePath = "C:\\awdawdawdawdawd";
-            ExportDataTableToPdf(dataTable, pdfFilePath);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF Dosyalarý|*.pdf";
+            saveFileDialog.Title = "PDF Dosyasýný Kaydet";
+            saveFileDialog.FileName = "deneme.pdf";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string pdfFilePath = saveFileDialog.FileName;
+                ExportDataTableToPdf(dataTable, pdfFilePath);
 
-            MessageBox.Show("PDF dosyasý oluþturuldu: " + pdfFilePath);
-        }
-
-        private void Search_Click(object sender, EventArgs e)
-        {
-
-            var bloodType = BloodType.SelectedIndex;
-
-            var city = City.Text;
-
-            bool durum = status.Checked;
-
-            SearchGridView.DataSource = um.Search("Ahmet", "Kemal", "");
+                MessageBox.Show("PDF dosyasý oluþturuldu: " + pdfFilePath);
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SearchGridView.DataSource = um.Search("Ahmet", "Kemal", "");// getById ile borclu olan uyenin aidatlarýný göstereceðiz
+            BorcluUyelerGridView.DataSource = dm.Borclular();
+        }
+        private void Search_Click(object sender, EventArgs e)
+        {
+
+            string bloodType = BloodType.Text;
+            bool durum = status.Checked;
+
+            SearchGridView.DataSource = um.SearchByBloodTypeAndStatus(bloodType, durum);
         }
 
-        private void tabPage4_Click(object sender, EventArgs e)
+        private void btnCitySearch_Click(object sender, EventArgs e)
+        {
+            string sehir = txtSearchCity.Text;
+            bool durum = status.Checked;
+
+            SearchGridView.DataSource = um.SearchByCityAndStatus(sehir, durum);
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell selectedCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                if (selectedCell.Value != null)
+                {
+                    txtDelete.Text = selectedCell.Value.ToString();
+                }
+            }
+        }
+
+        private void btnPayBills_Click(object sender, EventArgs e)
+        {
+            Dernek dernek = new Dernek
+            {
+                tc = txtUserIdForPayment.Text,
+                odemeTarihi = DateOnly.Parse(dateTimePaymentDate.Text),
+                odenenBorc = Int32.Parse(txtPaymentAmount.Text),
+            };
+
+            int result = dm.BorcOde(dernek);
+            if (result > 0)
+            {
+                MessageBox.Show("Ödeme baþarýlý.");
+            }
+            else
+            {
+                MessageBox.Show("Ödeme baþarýsýz. Lütfen bilgileri kontrol edin.");
+            }
+
+
+        }
+
+        private void BorcluUyelerGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell selectedCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                if (selectedCell.Value != null)
+                {
+                    txtUserIdForPayment.Text = selectedCell.Value.ToString();
+                }
+            }
+        }
     }
 }
+

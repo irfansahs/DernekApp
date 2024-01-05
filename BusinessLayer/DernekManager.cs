@@ -17,21 +17,20 @@ namespace BusinessLayer
 
         public DataTable ListAll()
         {
-            DernekRepository repository = new DernekRepository();
-            return repository.ListAll();
+            return dernekRepository.ListAll();
         }
-
-        public DataTable Search(string ad, string soyad, string kanGrubu)
-        {
-            DernekRepository dernekRepository = new DernekRepository();
-            return dernekRepository.Search(ad, soyad, kanGrubu);
-        }
-
-
         public void Insert(Dernek entity)
         {
-            DernekRepository repository = new DernekRepository();
-            repository.Insert(entity);
+            dernekRepository.Insert(entity);
+        }
+        public DataTable Borclular()
+        {
+            return dernekRepository.ListAll();
+
+        }
+        public int BorcOde(Dernek entity) {
+           return dernekRepository.BorcOde(entity);
+        
         }
 
         public void DeleteById(int id)
@@ -39,9 +38,6 @@ namespace BusinessLayer
             dernekRepository.DeleteById(id);
         }
 
-
-
     }
-
 
 }

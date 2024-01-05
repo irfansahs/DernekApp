@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
             btnAdd = new Button();
             txtName = new TextBox();
             txtDelete = new TextBox();
             btnDelete = new Button();
             groupBox1 = new GroupBox();
+            txtPhoneNumber = new MaskedTextBox();
+            txtSecNumber = new MaskedTextBox();
             BirthDay = new DateTimePicker();
             label8 = new Label();
-            txtPhoneNumber = new TextBox();
             checkboxState = new CheckBox();
             cbxBloodType = new ComboBox();
             label4 = new Label();
@@ -48,7 +50,6 @@
             label3 = new Label();
             txtEmail = new TextBox();
             label2 = new Label();
-            txtSecNumber = new TextBox();
             label1 = new Label();
             txtSurname = new TextBox();
             lblName = new Label();
@@ -56,28 +57,39 @@
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
             AidatGuncelle = new Button();
-            aidat = new TextBox();
+            txtAidat = new TextBox();
             AidatGridView2 = new DataGridView();
             tabPage3 = new TabPage();
-            BorcluUyeyiGoster = new Button();
-            textBox1 = new TextBox();
-            label11 = new Label();
+            groupBox3 = new GroupBox();
+            dateTimePaymentDate = new DateTimePicker();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            btnPayBills = new Button();
+            txtPaymentAmount = new TextBox();
+            txtUserIdForPayment = new TextBox();
+            groupBox2 = new GroupBox();
             MailBody = new RichTextBox();
             MailSubject = new TextBox();
             label10 = new Label();
             label9 = new Label();
-            pdfal = new Button();
             BorcluUyelereMailGonder = new Button();
+            BorcluUyeyiGoster = new Button();
+            textBox1 = new TextBox();
+            label11 = new Label();
+            pdfal = new Button();
             BorcluUyelerGridView = new DataGridView();
             tabPage4 = new TabPage();
+            btnCitySearch = new Button();
             status = new CheckBox();
-            City = new TextBox();
+            txtSearchCity = new TextBox();
             label13 = new Label();
             label12 = new Label();
             BloodType = new ComboBox();
-            Search = new Button();
+            btnSearchByBlood = new Button();
             SearchGridView = new DataGridView();
             tabPage5 = new TabPage();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -85,6 +97,8 @@
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)AidatGridView2).BeginInit();
             tabPage3.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).BeginInit();
             tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SearchGridView).BeginInit();
@@ -93,11 +107,13 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 6);
+            dataGridView1.Dock = DockStyle.Top;
+            dataGridView1.Location = new Point(3, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(767, 192);
+            dataGridView1.Size = new Size(871, 192);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnAdd
             // 
@@ -118,14 +134,14 @@
             // 
             // txtDelete
             // 
-            txtDelete.Location = new Point(624, 226);
+            txtDelete.Location = new Point(638, 221);
             txtDelete.Name = "txtDelete";
             txtDelete.Size = new Size(78, 23);
             txtDelete.TabIndex = 3;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(624, 261);
+            btnDelete.Location = new Point(638, 256);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(78, 28);
             btnDelete.TabIndex = 4;
@@ -135,9 +151,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.AutoSize = true;
+            groupBox1.Controls.Add(txtPhoneNumber);
+            groupBox1.Controls.Add(txtSecNumber);
             groupBox1.Controls.Add(BirthDay);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(txtPhoneNumber);
             groupBox1.Controls.Add(checkboxState);
             groupBox1.Controls.Add(cbxBloodType);
             groupBox1.Controls.Add(label4);
@@ -149,7 +167,6 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txtEmail);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtSecNumber);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txtSurname);
             groupBox1.Controls.Add(lblName);
@@ -157,10 +174,27 @@
             groupBox1.Controls.Add(txtName);
             groupBox1.Location = new Point(6, 204);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(514, 294);
+            groupBox1.Size = new Size(576, 295);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Yeni Üye";
+            // 
+            // txtPhoneNumber
+            // 
+            txtPhoneNumber.Location = new Point(82, 138);
+            txtPhoneNumber.Mask = "(999) 000 00 00";
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(100, 23);
+            txtPhoneNumber.TabIndex = 24;
+            // 
+            // txtSecNumber
+            // 
+            txtSecNumber.Location = new Point(82, 80);
+            txtSecNumber.Mask = "00000000000";
+            txtSecNumber.Name = "txtSecNumber";
+            txtSecNumber.Size = new Size(100, 23);
+            txtSecNumber.TabIndex = 23;
+            txtSecNumber.ValidatingType = typeof(int);
             // 
             // BirthDay
             // 
@@ -178,13 +212,6 @@
             label8.Size = new Size(45, 15);
             label8.TabIndex = 21;
             label8.Text = "Telefon";
-            // 
-            // txtPhoneNumber
-            // 
-            txtPhoneNumber.Location = new Point(82, 138);
-            txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(100, 23);
-            txtPhoneNumber.TabIndex = 20;
             // 
             // checkboxState
             // 
@@ -280,13 +307,6 @@
             label2.TabIndex = 7;
             label2.Text = "TC Numarası";
             // 
-            // txtSecNumber
-            // 
-            txtSecNumber.Location = new Point(82, 80);
-            txtSecNumber.Name = "txtSecNumber";
-            txtSecNumber.Size = new Size(100, 23);
-            txtSecNumber.TabIndex = 6;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -323,7 +343,7 @@
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(829, 615);
+            tabControl1.Size = new Size(885, 545);
             tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -335,7 +355,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(813, 482);
+            tabPage1.Size = new Size(877, 517);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Üye Yönetimi";
             tabPage1.UseVisualStyleBackColor = true;
@@ -344,19 +364,19 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(AidatGuncelle);
-            tabPage2.Controls.Add(aidat);
+            tabPage2.Controls.Add(txtAidat);
             tabPage2.Controls.Add(AidatGridView2);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(813, 482);
+            tabPage2.Size = new Size(877, 517);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Aidat Yönetimi";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // AidatGuncelle
             // 
-            AidatGuncelle.Location = new Point(464, 157);
+            AidatGuncelle.Location = new Point(354, 150);
             AidatGuncelle.Name = "AidatGuncelle";
             AidatGuncelle.Size = new Size(100, 23);
             AidatGuncelle.TabIndex = 2;
@@ -364,72 +384,132 @@
             AidatGuncelle.UseVisualStyleBackColor = true;
             AidatGuncelle.Click += AidatGuncelle_Click;
             // 
-            // aidat
+            // txtAidat
             // 
-            aidat.Location = new Point(464, 103);
-            aidat.Name = "aidat";
-            aidat.Size = new Size(100, 23);
-            aidat.TabIndex = 1;
+            txtAidat.Location = new Point(354, 109);
+            txtAidat.Name = "txtAidat";
+            txtAidat.Size = new Size(100, 23);
+            txtAidat.TabIndex = 1;
             // 
             // AidatGridView2
             // 
             AidatGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            AidatGridView2.Location = new Point(38, 38);
+            AidatGridView2.Dock = DockStyle.Left;
+            AidatGridView2.Location = new Point(3, 3);
             AidatGridView2.Name = "AidatGridView2";
             AidatGridView2.RowTemplate.Height = 25;
-            AidatGridView2.Size = new Size(368, 346);
+            AidatGridView2.Size = new Size(322, 511);
             AidatGridView2.TabIndex = 0;
             AidatGridView2.CellClick += AidatGridView2_CellClick;
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(groupBox3);
+            tabPage3.Controls.Add(groupBox2);
             tabPage3.Controls.Add(BorcluUyeyiGoster);
             tabPage3.Controls.Add(textBox1);
             tabPage3.Controls.Add(label11);
-            tabPage3.Controls.Add(MailBody);
-            tabPage3.Controls.Add(MailSubject);
-            tabPage3.Controls.Add(label10);
-            tabPage3.Controls.Add(label9);
             tabPage3.Controls.Add(pdfal);
-            tabPage3.Controls.Add(BorcluUyelereMailGonder);
             tabPage3.Controls.Add(BorcluUyelerGridView);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(821, 587);
+            tabPage3.Size = new Size(877, 517);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Borclu Uyeler";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // BorcluUyeyiGoster
+            // groupBox3
             // 
-            BorcluUyeyiGoster.Location = new Point(490, 344);
-            BorcluUyeyiGoster.Name = "BorcluUyeyiGoster";
-            BorcluUyeyiGoster.Size = new Size(173, 39);
-            BorcluUyeyiGoster.TabIndex = 9;
-            BorcluUyeyiGoster.Text = "Boru Olan Uyeyi Göster";
-            BorcluUyeyiGoster.UseVisualStyleBackColor = true;
-            BorcluUyeyiGoster.Click += button1_Click_1;
+            groupBox3.Controls.Add(dateTimePaymentDate);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(btnPayBills);
+            groupBox3.Controls.Add(txtPaymentAmount);
+            groupBox3.Controls.Add(txtUserIdForPayment);
+            groupBox3.Location = new Point(337, 254);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(249, 152);
+            groupBox3.TabIndex = 11;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Ödeme Al";
             // 
-            // textBox1
+            // dateTimePaymentDate
             // 
-            textBox1.Location = new Point(542, 275);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(121, 23);
-            textBox1.TabIndex = 8;
+            dateTimePaymentDate.Location = new Point(104, 84);
+            dateTimePaymentDate.Name = "dateTimePaymentDate";
+            dateTimePaymentDate.Size = new Size(110, 23);
+            dateTimePaymentDate.TabIndex = 7;
             // 
-            // label11
+            // label16
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(490, 278);
-            label11.Name = "label11";
-            label11.Size = new Size(46, 15);
-            label11.TabIndex = 7;
-            label11.Text = "Uye No";
+            label16.AutoSize = true;
+            label16.Location = new Point(6, 88);
+            label16.Name = "label16";
+            label16.Size = new Size(77, 15);
+            label16.TabIndex = 6;
+            label16.Text = "Ödenen Tarih";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(6, 59);
+            label15.Name = "label15";
+            label15.Size = new Size(41, 15);
+            label15.TabIndex = 4;
+            label15.Text = "Miktar";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(6, 30);
+            label14.Name = "label14";
+            label14.Size = new Size(20, 15);
+            label14.TabIndex = 3;
+            label14.Text = "TC";
+            // 
+            // btnPayBills
+            // 
+            btnPayBills.Location = new Point(83, 121);
+            btnPayBills.Name = "btnPayBills";
+            btnPayBills.Size = new Size(75, 23);
+            btnPayBills.TabIndex = 2;
+            btnPayBills.Text = "Ödeme";
+            btnPayBills.UseVisualStyleBackColor = true;
+            btnPayBills.Click += btnPayBills_Click;
+            // 
+            // txtPaymentAmount
+            // 
+            txtPaymentAmount.Location = new Point(104, 51);
+            txtPaymentAmount.Name = "txtPaymentAmount";
+            txtPaymentAmount.Size = new Size(100, 23);
+            txtPaymentAmount.TabIndex = 1;
+            // 
+            // txtUserIdForPayment
+            // 
+            txtUserIdForPayment.Location = new Point(104, 22);
+            txtUserIdForPayment.Name = "txtUserIdForPayment";
+            txtUserIdForPayment.Size = new Size(100, 23);
+            txtUserIdForPayment.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(MailBody);
+            groupBox2.Controls.Add(MailSubject);
+            groupBox2.Controls.Add(label10);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(BorcluUyelereMailGonder);
+            groupBox2.Location = new Point(13, 242);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(316, 258);
+            groupBox2.TabIndex = 10;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Mail Gönder";
             // 
             // MailBody
             // 
-            MailBody.Location = new Point(156, 344);
+            MailBody.Location = new Point(87, 70);
             MailBody.Name = "MailBody";
             MailBody.Size = new Size(196, 77);
             MailBody.TabIndex = 6;
@@ -437,7 +517,7 @@
             // 
             // MailSubject
             // 
-            MailSubject.Location = new Point(156, 275);
+            MailSubject.Location = new Point(87, 27);
             MailSubject.Name = "MailSubject";
             MailSubject.Size = new Size(196, 23);
             MailSubject.TabIndex = 5;
@@ -445,7 +525,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(83, 376);
+            label10.Location = new Point(14, 102);
             label10.Name = "label10";
             label10.Size = new Size(65, 15);
             label10.TabIndex = 4;
@@ -454,59 +534,98 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(83, 278);
+            label9.Location = new Point(14, 27);
             label9.Name = "label9";
             label9.Size = new Size(67, 15);
             label9.TabIndex = 3;
             label9.Text = "Mail Başlığı";
             // 
-            // pdfal
-            // 
-            pdfal.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            pdfal.Location = new Point(490, 461);
-            pdfal.Name = "pdfal";
-            pdfal.Size = new Size(173, 63);
-            pdfal.TabIndex = 2;
-            pdfal.Text = "PDF Olarak Al";
-            pdfal.UseVisualStyleBackColor = true;
-            pdfal.Click += pdfal_Click;
-            // 
             // BorcluUyelereMailGonder
             // 
-            BorcluUyelereMailGonder.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            BorcluUyelereMailGonder.Location = new Point(134, 461);
+            BorcluUyelereMailGonder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BorcluUyelereMailGonder.Location = new Point(73, 164);
             BorcluUyelereMailGonder.Name = "BorcluUyelereMailGonder";
-            BorcluUyelereMailGonder.Size = new Size(235, 63);
+            BorcluUyelereMailGonder.Size = new Size(210, 63);
             BorcluUyelereMailGonder.TabIndex = 1;
             BorcluUyelereMailGonder.Text = "Borclu Kullanıcılara Mail Gönder";
             BorcluUyelereMailGonder.UseVisualStyleBackColor = true;
             BorcluUyelereMailGonder.Click += BorcluUyelereMailGonder_Click;
             // 
+            // BorcluUyeyiGoster
+            // 
+            BorcluUyeyiGoster.Location = new Point(628, 359);
+            BorcluUyeyiGoster.Name = "BorcluUyeyiGoster";
+            BorcluUyeyiGoster.Size = new Size(173, 39);
+            BorcluUyeyiGoster.TabIndex = 9;
+            BorcluUyeyiGoster.Text = "Borcu Olan Uyeyi Göster";
+            BorcluUyeyiGoster.UseVisualStyleBackColor = true;
+            BorcluUyeyiGoster.Click += button1_Click_1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(656, 261);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(121, 23);
+            textBox1.TabIndex = 8;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(604, 264);
+            label11.Name = "label11";
+            label11.Size = new Size(46, 15);
+            label11.TabIndex = 7;
+            label11.Text = "Uye No";
+            // 
+            // pdfal
+            // 
+            pdfal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            pdfal.Location = new Point(643, 304);
+            pdfal.Name = "pdfal";
+            pdfal.Size = new Size(134, 37);
+            pdfal.TabIndex = 2;
+            pdfal.Text = "PDF Olarak Al";
+            pdfal.UseVisualStyleBackColor = true;
+            pdfal.Click += pdfal_Click;
+            // 
             // BorcluUyelerGridView
             // 
             BorcluUyelerGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BorcluUyelerGridView.Location = new Point(41, 41);
+            BorcluUyelerGridView.Dock = DockStyle.Top;
+            BorcluUyelerGridView.Location = new Point(3, 3);
             BorcluUyelerGridView.Name = "BorcluUyelerGridView";
             BorcluUyelerGridView.RowTemplate.Height = 25;
-            BorcluUyelerGridView.Size = new Size(695, 200);
+            BorcluUyelerGridView.Size = new Size(871, 195);
             BorcluUyelerGridView.TabIndex = 0;
+            BorcluUyelerGridView.CellClick += BorcluUyelerGridView_CellClick;
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(btnCitySearch);
             tabPage4.Controls.Add(status);
-            tabPage4.Controls.Add(City);
+            tabPage4.Controls.Add(txtSearchCity);
             tabPage4.Controls.Add(label13);
             tabPage4.Controls.Add(label12);
             tabPage4.Controls.Add(BloodType);
-            tabPage4.Controls.Add(Search);
+            tabPage4.Controls.Add(btnSearchByBlood);
             tabPage4.Controls.Add(SearchGridView);
             tabPage4.Location = new Point(4, 24);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(787, 582);
+            tabPage4.Size = new Size(877, 517);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Sorgu Ekranı";
             tabPage4.UseVisualStyleBackColor = true;
-            tabPage4.Click += tabPage4_Click;
+            // 
+            // btnCitySearch
+            // 
+            btnCitySearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCitySearch.Location = new Point(328, 339);
+            btnCitySearch.Name = "btnCitySearch";
+            btnCitySearch.Size = new Size(97, 33);
+            btnCitySearch.TabIndex = 8;
+            btnCitySearch.Text = "Sorgula";
+            btnCitySearch.UseVisualStyleBackColor = true;
+            btnCitySearch.Click += btnCitySearch_Click;
             // 
             // status
             // 
@@ -521,13 +640,13 @@
             status.Text = "Durum";
             status.UseVisualStyleBackColor = true;
             // 
-            // City
+            // txtSearchCity
             // 
-            City.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            City.Location = new Point(178, 336);
-            City.Name = "City";
-            City.Size = new Size(121, 33);
-            City.TabIndex = 5;
+            txtSearchCity.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearchCity.Location = new Point(178, 336);
+            txtSearchCity.Name = "txtSearchCity";
+            txtSearchCity.Size = new Size(121, 33);
+            txtSearchCity.TabIndex = 5;
             // 
             // label13
             // 
@@ -559,16 +678,16 @@
             BloodType.Size = new Size(121, 33);
             BloodType.TabIndex = 2;
             // 
-            // Search
+            // btnSearchByBlood
             // 
-            Search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Search.Location = new Point(469, 313);
-            Search.Name = "Search";
-            Search.Size = new Size(149, 56);
-            Search.TabIndex = 1;
-            Search.Text = "Sorgula";
-            Search.UseVisualStyleBackColor = true;
-            Search.Click += Search_Click;
+            btnSearchByBlood.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSearchByBlood.Location = new Point(328, 290);
+            btnSearchByBlood.Name = "btnSearchByBlood";
+            btnSearchByBlood.Size = new Size(97, 33);
+            btnSearchByBlood.TabIndex = 1;
+            btnSearchByBlood.Text = "Sorgula";
+            btnSearchByBlood.UseVisualStyleBackColor = true;
+            btnSearchByBlood.Click += Search_Click;
             // 
             // SearchGridView
             // 
@@ -584,16 +703,21 @@
             tabPage5.Location = new Point(4, 24);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(813, 482);
+            tabPage5.Size = new Size(877, 517);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Grafikler";
             tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(829, 615);
+            ClientSize = new Size(885, 545);
             Controls.Add(tabControl1);
             Name = "MainPage";
             Text = "Form1";
@@ -609,6 +733,10 @@
             ((System.ComponentModel.ISupportInitialize)AidatGridView2).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).EndInit();
             tabPage4.ResumeLayout(false);
             tabPage4.PerformLayout();
@@ -636,23 +764,21 @@
         private Label label3;
         private TextBox txtEmail;
         private Label label2;
-        private TextBox txtSecNumber;
         private Label label1;
         private TextBox txtSurname;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
         private Label label8;
-        private TextBox txtPhoneNumber;
         private Button AidatGuncelle;
-        private TextBox aidat;
+        private TextBox txtAidat;
         private DataGridView AidatGridView2;
         private TabPage tabPage3;
         private Button BorcluUyelereMailGonder;
         private DataGridView BorcluUyelerGridView;
         private Button pdfal;
         private TabPage tabPage4;
-        private Button Search;
+        private Button btnSearchByBlood;
         private DataGridView SearchGridView;
         private RichTextBox MailBody;
         private TextBox MailSubject;
@@ -663,10 +789,23 @@
         private Label label11;
         private Label label12;
         private ComboBox BloodType;
-        private TextBox City;
+        private TextBox txtSearchCity;
         private Label label13;
         private CheckBox status;
         private DateTimePicker BirthDay;
         private TabPage tabPage5;
+        private ContextMenuStrip contextMenuStrip1;
+        private Button btnCitySearch;
+        private MaskedTextBox txtPhoneNumber;
+        private MaskedTextBox txtSecNumber;
+        private GroupBox groupBox2;
+        private GroupBox groupBox3;
+        private DateTimePicker dateTimePaymentDate;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Button btnPayBills;
+        private TextBox txtPaymentAmount;
+        private TextBox txtUserIdForPayment;
     }
 }

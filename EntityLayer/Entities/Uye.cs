@@ -10,11 +10,12 @@ namespace EntityLayer.Entities
     public class Uye
     {
         [Key]
-        public int Id { get; set; }
+        
         public string tc { get; set; }
         public string isim { get; set; }
         public string soyisim { get; set; }
         public string sehir { get; set; }
+        public string email { get; set; }  
         public DateTime dogTarih { get; set; }
         public string kanGrubu { get; set; }
         public bool durum { get; set; }

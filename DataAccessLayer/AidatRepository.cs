@@ -32,11 +32,11 @@ namespace DataAccessLayer
             using (OleDbConnection connection = Context.GetConnection())
             {
 
-                string insertQuery = "UPDATE aidat SET aidat = @aylar WHERE aylar = @aylar";
+                string insertQuery = "UPDATE aidat SET aidat = @aidat WHERE Kimlik = @Id";
 
                 using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
                 {
-                    insertCommand.Parameters.AddWithValue("@aylar", aidat.Aylar);
+                    insertCommand.Parameters.AddWithValue("@Id", aidat.Id);
                     insertCommand.Parameters.AddWithValue("@aidat", aidat.aidat);
 
                     insertCommand.ExecuteNonQuery();

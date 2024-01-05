@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataAccessLayer
-build_property.ProjectDir = C:\Users\DELL\Desktop\GörselDernek\DataAccessLayer\
+build_property.ProjectDir = C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DataAccessLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

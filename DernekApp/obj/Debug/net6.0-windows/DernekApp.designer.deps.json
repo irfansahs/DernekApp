@@ -1147,6 +1147,14 @@
             "fileVersion": "4.6.24705.1"
           }
         }
+      },
+      "ZedGraph6/6.0.0": {
+        "runtime": {
+          "lib/net6.0-windows7.0/ZedGraph6.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1738,6 +1746,13 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "ZedGraph6/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ub3xq8TtokXdIFl+ATfhCdWtA7hg9wpcpW1l+MJ0zIZWatDPN2BO4xx2zeF/H6wwr5NKYViT1U3q9qCuu1Mh+Q==",
+      "path": "zedgraph6/6.0.0",
+      "hashPath": "zedgraph6.6.0.0.nupkg.sha512"
     }
   }
 }

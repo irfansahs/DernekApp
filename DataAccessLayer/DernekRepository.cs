@@ -42,20 +42,14 @@ namespace DataAccessLayer
             {
 
 
-                string insertQuery = "INSERT INTO uyeTablosu (tc, isim, soyisim, dogTarih, sehir, kanGrubu, durum) " +
-                     "VALUES (@tc, @isim, @soyisim, @dogTarih, @sehir, @kanGrubu, @durum)";
+                string insertQuery = "INSERT INTO dernekTablosu (tc, email) VALUES (@tc, @email)";
 
                 using (OleDbCommand insertCommand = new OleDbCommand(insertQuery, connection))
                 {
                     insertCommand.Parameters.AddWithValue("@tc", entity.tc);
-                /*
-                    insertCommand.Parameters.AddWithValue("@isim", entity.isim);
-                    insertCommand.Parameters.AddWithValue("@soyisim", entity.soyisim);
-                    insertCommand.Parameters.Add("@dogTarih", "2023-12-20");
-                    insertCommand.Parameters.AddWithValue("@sehir", entity.sehir);
-                    insertCommand.Parameters.AddWithValue("@kanGrubu", entity.kanGrubu);
-                    insertCommand.Parameters.AddWithValue("@durum", entity.durum);
-                */
+                    insertCommand.Parameters.AddWithValue("@email", entity.email);
+
+                    
                     insertCommand.ExecuteNonQuery();
                 }
                 ListAll();
@@ -66,7 +60,7 @@ namespace DataAccessLayer
         {
             using (OleDbConnection connection = Context.GetConnection())
             {
-                string query = "SELECT * FROM uyeTablosu";
+                string query = "SELECT * FROM dernekTablosu";
 
                 using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
                 {
@@ -76,23 +70,14 @@ namespace DataAccessLayer
                 }
             }
         }
-
-        public DataTable Search(string ad, string soyad, string kanGrubu)
+        public DataTable Borclular()
         {
             using (OleDbConnection connection = Context.GetConnection())
             {
-                string query = "SELECT * FROM uyeTablosu WHERE 1 = 1";
-
-                query += (!string.IsNullOrEmpty(ad)) ? " AND Ad LIKE @ad" : "";
-                query += (!string.IsNullOrEmpty(soyad)) ? " AND Soyad LIKE @soyad" : "";
-                query += (!string.IsNullOrEmpty(kanGrubu)) ? " AND KanGrubu = @kanGrubu" : "";
+                string query = "SELECT * FROM dernekTablosu WHERE borc>0";
 
                 using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
                 {
-                    adapter.SelectCommand.Parameters.AddWithValue("@ad", $"%{ad}%");
-                    adapter.SelectCommand.Parameters.AddWithValue("@soyad", $"%{soyad}%");
-                    adapter.SelectCommand.Parameters.AddWithValue("@kanGrubu", kanGrubu);
-
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
                     return dataTable;
@@ -100,7 +85,43 @@ namespace DataAccessLayer
             }
         }
 
+      
+        public int BorcOde(Dernek entity)
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
 
+                string queryGet = "SELECT Borc, odemedemeTarihi FROM dernekTablosu WHERE tc = @Tc";
+                OleDbCommand cmdGet = new OleDbCommand(queryGet, connection);
+                cmdGet.Parameters.AddWithValue("@Tc", entity.tc);
+                OleDbDataReader reader = cmdGet.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    decimal mevcutBorc = reader.GetDecimal(0);
+                    DateTime sonOdemeTarihi = reader.GetDateTime(1);
+
+                    if (DateTime.Now > sonOdemeTarihi)
+                    {
+                        int gecikmeAyi = (DateTime.Now.Year - sonOdemeTarihi.Year) * 12 + DateTime.Now.Month - sonOdemeTarihi.Month;
+                        mevcutBorc += mevcutBorc * 0.02m * gecikmeAyi;
+                    }
+
+                    decimal yeniBorc = mevcutBorc - entity.odenenBorc;
+                    string queryUpdate = "UPDATE dernekTablosu SET borc = @YeniBorc, odemeTarihi = @SonOdemeTarihi WHERE tc = @Tc";
+                    OleDbCommand cmdUpdate = new OleDbCommand(queryUpdate, connection);
+                    cmdUpdate.Parameters.AddWithValue("@YeniBorc", yeniBorc);
+                    cmdUpdate.Parameters.AddWithValue("@SonOdemeTarihi", entity.odemeTarihi);
+                    cmdUpdate.Parameters.AddWithValue("@Tc", entity.tc);
+
+                    return cmdUpdate.ExecuteNonQuery();
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
 
         public int Update(Dernek entity)
         {
