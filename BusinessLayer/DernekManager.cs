@@ -28,6 +28,19 @@ namespace BusinessLayer
             return dernekRepository.ListAll();
 
         }
+        public DataTable BorclularListele()
+        {
+            return dernekRepository.ListAllBorclular();
+
+
+        }
+        public DataTable GetEmail()
+        {
+            return dernekRepository.GetBorcluEmail();
+
+
+        }
+
         public int BorcOde(Dernek entity) {
            return dernekRepository.BorcOde(entity);
         

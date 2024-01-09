@@ -52,6 +52,7 @@ namespace DataAccessLayer
                     
                     insertCommand.ExecuteNonQuery();
                 }
+
                 ListAll();
             }
         }
@@ -61,6 +62,34 @@ namespace DataAccessLayer
             using (OleDbConnection connection = Context.GetConnection())
             {
                 string query = "SELECT * FROM dernekTablosu";
+
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+        }
+        public DataTable ListAllBorclular()
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string query = "SELECT * FROM dernekTablosu where borc>0";
+
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+        }
+        public DataTable GetBorcluEmail()
+        {
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+                string query = "SELECT email FROM dernekTablosu where borc>0";
 
                 using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
                 {
@@ -90,36 +119,17 @@ namespace DataAccessLayer
         {
             using (OleDbConnection connection = Context.GetConnection())
             {
+                string query = "UPDATE dernekTablosu SET borc = borc - @OdenenBorc, odemeTarihi = @OdemeTarihi WHERE tc = @Tc";
 
-                string queryGet = "SELECT Borc, odemedemeTarihi FROM dernekTablosu WHERE tc = @Tc";
-                OleDbCommand cmdGet = new OleDbCommand(queryGet, connection);
-                cmdGet.Parameters.AddWithValue("@Tc", entity.tc);
-                OleDbDataReader reader = cmdGet.ExecuteReader();
+                OleDbCommand cmd = new OleDbCommand(query, connection);
+                cmd.Parameters.AddWithValue("@OdenenBorc", entity.odenenBorc);
+                cmd.Parameters.AddWithValue("@OdemeTarihi", entity.odemeTarihi);
+                cmd.Parameters.AddWithValue("@Tc", entity.tc);
 
-                if (reader.Read())
-                {
-                    decimal mevcutBorc = reader.GetDecimal(0);
-                    DateTime sonOdemeTarihi = reader.GetDateTime(1);
+                int affectedRows = cmd.ExecuteNonQuery();
+                connection.Close();
 
-                    if (DateTime.Now > sonOdemeTarihi)
-                    {
-                        int gecikmeAyi = (DateTime.Now.Year - sonOdemeTarihi.Year) * 12 + DateTime.Now.Month - sonOdemeTarihi.Month;
-                        mevcutBorc += mevcutBorc * 0.02m * gecikmeAyi;
-                    }
-
-                    decimal yeniBorc = mevcutBorc - entity.odenenBorc;
-                    string queryUpdate = "UPDATE dernekTablosu SET borc = @YeniBorc, odemeTarihi = @SonOdemeTarihi WHERE tc = @Tc";
-                    OleDbCommand cmdUpdate = new OleDbCommand(queryUpdate, connection);
-                    cmdUpdate.Parameters.AddWithValue("@YeniBorc", yeniBorc);
-                    cmdUpdate.Parameters.AddWithValue("@SonOdemeTarihi", entity.odemeTarihi);
-                    cmdUpdate.Parameters.AddWithValue("@Tc", entity.tc);
-
-                    return cmdUpdate.ExecuteNonQuery();
-                }
-                else
-                {
-                    return 0;
-                }
+                return 1;
             }
         }
 

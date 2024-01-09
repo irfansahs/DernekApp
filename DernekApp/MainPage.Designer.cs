@@ -56,6 +56,9 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
+            label20 = new Label();
+            label19 = new Label();
+            txtAidatID = new TextBox();
             AidatGuncelle = new Button();
             txtAidat = new TextBox();
             AidatGridView2 = new DataGridView();
@@ -80,6 +83,11 @@
             pdfal = new Button();
             BorcluUyelerGridView = new DataGridView();
             tabPage4 = new TabPage();
+            btnDateDiff = new Button();
+            label18 = new Label();
+            label17 = new Label();
+            dateSecondDate = new DateTimePicker();
+            dateFirstDate = new DateTimePicker();
             btnCitySearch = new Button();
             status = new CheckBox();
             txtSearchCity = new TextBox();
@@ -107,11 +115,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Top;
             dataGridView1.Location = new Point(3, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(871, 192);
+            dataGridView1.Size = new Size(874, 192);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -363,6 +370,9 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(label20);
+            tabPage2.Controls.Add(label19);
+            tabPage2.Controls.Add(txtAidatID);
             tabPage2.Controls.Add(AidatGuncelle);
             tabPage2.Controls.Add(txtAidat);
             tabPage2.Controls.Add(AidatGridView2);
@@ -374,9 +384,34 @@
             tabPage2.Text = "Aidat Yönetimi";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(580, 113);
+            label20.Name = "label20";
+            label20.Size = new Size(118, 15);
+            label20.TabIndex = 5;
+            label20.Text = "Güncellenecek Değer";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(580, 85);
+            label19.Name = "label19";
+            label19.Size = new Size(56, 15);
+            label19.TabIndex = 4;
+            label19.Text = "Hangi Ay";
+            // 
+            // txtAidatID
+            // 
+            txtAidatID.Location = new Point(712, 77);
+            txtAidatID.Name = "txtAidatID";
+            txtAidatID.Size = new Size(100, 23);
+            txtAidatID.TabIndex = 3;
+            // 
             // AidatGuncelle
             // 
-            AidatGuncelle.Location = new Point(354, 150);
+            AidatGuncelle.Location = new Point(712, 147);
             AidatGuncelle.Name = "AidatGuncelle";
             AidatGuncelle.Size = new Size(100, 23);
             AidatGuncelle.TabIndex = 2;
@@ -386,7 +421,7 @@
             // 
             // txtAidat
             // 
-            txtAidat.Location = new Point(354, 109);
+            txtAidat.Location = new Point(712, 106);
             txtAidat.Name = "txtAidat";
             txtAidat.Size = new Size(100, 23);
             txtAidat.TabIndex = 1;
@@ -394,11 +429,10 @@
             // AidatGridView2
             // 
             AidatGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            AidatGridView2.Dock = DockStyle.Left;
             AidatGridView2.Location = new Point(3, 3);
             AidatGridView2.Name = "AidatGridView2";
             AidatGridView2.RowTemplate.Height = 25;
-            AidatGridView2.Size = new Size(322, 511);
+            AidatGridView2.Size = new Size(537, 461);
             AidatGridView2.TabIndex = 0;
             AidatGridView2.CellClick += AidatGridView2_CellClick;
             // 
@@ -553,7 +587,7 @@
             // 
             // BorcluUyeyiGoster
             // 
-            BorcluUyeyiGoster.Location = new Point(628, 359);
+            BorcluUyeyiGoster.Location = new Point(627, 359);
             BorcluUyeyiGoster.Name = "BorcluUyeyiGoster";
             BorcluUyeyiGoster.Size = new Size(173, 39);
             BorcluUyeyiGoster.TabIndex = 9;
@@ -601,6 +635,11 @@
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(btnDateDiff);
+            tabPage4.Controls.Add(label18);
+            tabPage4.Controls.Add(label17);
+            tabPage4.Controls.Add(dateSecondDate);
+            tabPage4.Controls.Add(dateFirstDate);
             tabPage4.Controls.Add(btnCitySearch);
             tabPage4.Controls.Add(status);
             tabPage4.Controls.Add(txtSearchCity);
@@ -616,10 +655,57 @@
             tabPage4.Text = "Sorgu Ekranı";
             tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btnDateDiff
+            // 
+            btnDateDiff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDateDiff.Location = new Point(445, 335);
+            btnDateDiff.Name = "btnDateDiff";
+            btnDateDiff.Size = new Size(97, 33);
+            btnDateDiff.TabIndex = 13;
+            btnDateDiff.Text = "Sorgula";
+            btnDateDiff.UseVisualStyleBackColor = true;
+            btnDateDiff.Click += btnDateDiff_Click;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(669, 255);
+            label18.Name = "label18";
+            label18.Size = new Size(44, 15);
+            label18.TabIndex = 12;
+            label18.Text = "2. Tarih";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(445, 255);
+            label17.Name = "label17";
+            label17.Size = new Size(44, 15);
+            label17.TabIndex = 11;
+            label17.Text = "1. Tarih";
+            // 
+            // dateSecondDate
+            // 
+            dateSecondDate.CustomFormat = "yyyy-MM-dd";
+            dateSecondDate.Location = new Point(669, 289);
+            dateSecondDate.Name = "dateSecondDate";
+            dateSecondDate.Size = new Size(200, 23);
+            dateSecondDate.TabIndex = 10;
+            dateSecondDate.Value = new DateTime(2024, 1, 4, 0, 0, 0, 0);
+            // 
+            // dateFirstDate
+            // 
+            dateFirstDate.CustomFormat = "yyyy-MM-dd";
+            dateFirstDate.Location = new Point(445, 289);
+            dateFirstDate.Name = "dateFirstDate";
+            dateFirstDate.Size = new Size(200, 23);
+            dateFirstDate.TabIndex = 9;
+            dateFirstDate.Value = new DateTime(2024, 1, 9, 0, 0, 0, 0);
+            // 
             // btnCitySearch
             // 
             btnCitySearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCitySearch.Location = new Point(328, 339);
+            btnCitySearch.Location = new Point(249, 338);
             btnCitySearch.Name = "btnCitySearch";
             btnCitySearch.Size = new Size(97, 33);
             btnCitySearch.TabIndex = 8;
@@ -633,7 +719,7 @@
             status.Checked = true;
             status.CheckState = CheckState.Checked;
             status.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            status.Location = new Point(178, 384);
+            status.Location = new Point(99, 383);
             status.Name = "status";
             status.Size = new Size(89, 29);
             status.TabIndex = 7;
@@ -643,7 +729,7 @@
             // txtSearchCity
             // 
             txtSearchCity.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSearchCity.Location = new Point(178, 336);
+            txtSearchCity.Location = new Point(99, 335);
             txtSearchCity.Name = "txtSearchCity";
             txtSearchCity.Size = new Size(121, 33);
             txtSearchCity.TabIndex = 5;
@@ -652,7 +738,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(117, 339);
+            label13.Location = new Point(38, 338);
             label13.Name = "label13";
             label13.Size = new Size(55, 25);
             label13.TabIndex = 4;
@@ -662,7 +748,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(128, 293);
+            label12.Location = new Point(49, 292);
             label12.Name = "label12";
             label12.Size = new Size(44, 25);
             label12.TabIndex = 3;
@@ -673,7 +759,7 @@
             BloodType.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             BloodType.FormattingEnabled = true;
             BloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-" });
-            BloodType.Location = new Point(178, 290);
+            BloodType.Location = new Point(99, 289);
             BloodType.Name = "BloodType";
             BloodType.Size = new Size(121, 33);
             BloodType.TabIndex = 2;
@@ -681,7 +767,7 @@
             // btnSearchByBlood
             // 
             btnSearchByBlood.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSearchByBlood.Location = new Point(328, 290);
+            btnSearchByBlood.Location = new Point(249, 289);
             btnSearchByBlood.Name = "btnSearchByBlood";
             btnSearchByBlood.Size = new Size(97, 33);
             btnSearchByBlood.TabIndex = 1;
@@ -692,10 +778,10 @@
             // SearchGridView
             // 
             SearchGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SearchGridView.Location = new Point(72, 54);
+            SearchGridView.Location = new Point(49, 39);
             SearchGridView.Name = "SearchGridView";
             SearchGridView.RowTemplate.Height = 25;
-            SearchGridView.Size = new Size(639, 160);
+            SearchGridView.Size = new Size(771, 160);
             SearchGridView.TabIndex = 0;
             // 
             // tabPage5
@@ -807,5 +893,13 @@
         private Button btnPayBills;
         private TextBox txtPaymentAmount;
         private TextBox txtUserIdForPayment;
+        private TextBox txtAidatID;
+        private Button btnDateDiff;
+        private Label label18;
+        private Label label17;
+        private DateTimePicker dateSecondDate;
+        private DateTimePicker dateFirstDate;
+        private Label label20;
+        private Label label19;
     }
 }

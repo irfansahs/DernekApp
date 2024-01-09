@@ -16,7 +16,7 @@ namespace EntityLayer.Entities
         public string AidatTarihi { get; set; }
         public string aidat { get; set; }
         public string borc { get; set; }
-        public DateOnly odemeTarihi { get; set; }
+        public DateTime odemeTarihi { get; set; }
         public string email { get; set; }
         public int odenenBorc { get; set; }
     }

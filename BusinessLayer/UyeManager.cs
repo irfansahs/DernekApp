@@ -28,6 +28,10 @@ namespace BusinessLayer
         {
             return uyeRepository.ListAll();
         }
+        public DataTable DateDiff(DateTime firstDate, DateTime secondDate)
+        {
+            return uyeRepository.SearchByDateDiff(firstDate,secondDate);
+        }
 
         public void Insert(Uye uye)
         {

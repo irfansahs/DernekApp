@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DernekApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fb2c584003c14077d5a38dd754cefad4f13575b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddf60c3d8083d5b4e59efa4f10eec8adf407ac2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DernekApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DernekApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -107,47 +107,67 @@ namespace DernekApp
 
         private void AidatGuncelle_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtAidatID.Text) || string.IsNullOrEmpty(txtAidat.Text))
+            {
+                MessageBox.Show("Metin kutularý boþ olamaz.");
+                return;
+            }
 
+            if (!int.TryParse(txtAidatID.Text, out int aidatID) || !int.TryParse(txtAidat.Text, out int aidatValue))
+            {
+                MessageBox.Show("Geçersiz sayýsal deðerler. Lütfen doðru format kullanýn.");
+                return;
+            }
 
             Aidat a = new Aidat
             {
-                aidat = Int32.Parse(txtAidat.Text)
+                Id = aidatValue,
+                aidat = aidatID
             };
 
-
             am.Update(a);
+            yenile();
         }
+
+
+
 
         private void AidatGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.AidatGridView2.Rows[e.RowIndex];
-            txtAidat.Text = row.Cells["aidat"].Value.ToString();
         }
 
         private void BorcluUyelereMailGonder_Click(object sender, EventArgs e)
         {
-
-            EmailMessage email = new EmailMessage
-            {
-                FromAddress = "gonderen@example.com",
-                Password = "gonderenin_sifresi",
-                ToAddress = "black969691@gmail.com",
-                Subject = MailSubject.Text,
-                Body = MailBody.Text
-            };
+            var borclular = dm.GetEmail();
 
             try
             {
-                EmailService emailService = new EmailService();
-                emailService.SendEmail(email);
+                for (int i = 0; i < borclular.Rows.Count; i++)
+                {
+                    string email = borclular.Rows[i]["email"].ToString();
+
+                    EmailMessage emailMessage = new EmailMessage
+                    {
+                        FromAddress = "ddernekuygulamasi@gmail.com",
+                        Password = "xvmgopvtfymikpxm",
+                        ToAddress = email,
+                        Subject = MailSubject.Text,
+                        Body = MailBody.Text
+                    };
+
+                    EmailService emailService = new EmailService();
+                    emailService.SendEmail(emailMessage);
+                }
+
+                MessageBox.Show("E-postalar baþarýyla gönderildi");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Mail Adersi Doðru deðil");
+                MessageBox.Show("E-posta gönderme hatasý: " + ex.Message);
             }
-
-
         }
+
+
 
         private static void ExportDataTableToPdf(DataTable dataTable, string filePath)
         {
@@ -213,7 +233,7 @@ namespace DernekApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            BorcluUyelerGridView.DataSource = dm.Borclular();
+            BorcluUyelerGridView.DataSource = dm.BorclularListele();
         }
         private void Search_Click(object sender, EventArgs e)
         {
@@ -255,7 +275,7 @@ namespace DernekApp
             Dernek dernek = new Dernek
             {
                 tc = txtUserIdForPayment.Text,
-                odemeTarihi = DateOnly.Parse(dateTimePaymentDate.Text),
+                odemeTarihi = dateTimePaymentDate.Value.Date,
                 odenenBorc = Int32.Parse(txtPaymentAmount.Text),
             };
 
@@ -263,6 +283,7 @@ namespace DernekApp
             if (result > 0)
             {
                 MessageBox.Show("Ödeme baþarýlý.");
+                yenile();
             }
             else
             {
@@ -276,13 +297,23 @@ namespace DernekApp
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                DataGridViewCell selectedCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                DataGridViewCell selectedCell = BorcluUyelerGridView.Rows[e.RowIndex].Cells["tc"]; 
 
                 if (selectedCell.Value != null)
                 {
                     txtUserIdForPayment.Text = selectedCell.Value.ToString();
                 }
             }
+        }
+
+        private void btnDateDiff_Click(object sender, EventArgs e)
+        {
+            DateTime firstDate = dateFirstDate.Value.Date;
+            DateTime secondDate = dateSecondDate.Value.Date;
+
+            DataTable payments = um.DateDiff(firstDate, secondDate);
+
+            SearchGridView.DataSource = payments;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BusinessLayer
 {
@@ -24,18 +25,25 @@ namespace BusinessLayer
         {
             try
             {
+
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress(email.FromAddress);
+
+                mail.From = new MailAddress("ddernekuygulamasi@gmail.com", "Dernek projesi");
                 mail.To.Add(email.ToAddress);
+                mail.Subject = "Dernek uygulaması";
                 mail.Subject = email.Subject;
+
                 mail.Body = email.Body;
 
-                SmtpClient smtp = new SmtpClient("smtp.example.com");
-                smtp.Port = 587;
-                smtp.Credentials = new NetworkCredential(email.FromAddress, email.Password);
-                smtp.EnableSsl = true;
 
-                smtp.Send(mail);
+                var smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential("ddernekuygulamasi@gmail.com", "xvmgopvtfymikpxm"),
+                    EnableSsl = true,
+                };
+
+                smtpClient.Send(mail);
 
                 Console.WriteLine("E-posta başarıyla gönderildi.");
             }

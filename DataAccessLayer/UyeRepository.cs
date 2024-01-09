@@ -106,6 +106,33 @@ namespace DataAccessLayer
             }
         }
 
+        public DataTable SearchByDateDiff(DateTime firstDate, DateTime secondDate)
+        {
+            DataTable result = new DataTable();
+
+            
+                using (OleDbConnection connection = Context.GetConnection())
+                {
+                    string query = @"
+                SELECT uyeTablosu.*, dernekTablosu.*
+                FROM uyeTablosu
+                INNER JOIN dernekTablosu ON uyeTablosu.tc = dernekTablosu.tc
+                WHERE dernekTablosu.odemeTarihi BETWEEN @firstDate AND @secondDate";
+
+                    using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                    {
+                        adapter.SelectCommand.Parameters.AddWithValue("@firstDate", firstDate);
+                        adapter.SelectCommand.Parameters.AddWithValue("@secondDate", secondDate);
+
+                        adapter.Fill(result);
+                    }
+                }
+            
+           
+
+            return result;
+        }
+
 
         public DataTable Search(string isim, string soyisim, string kanGrubu)
         {
