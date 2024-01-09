@@ -107,3 +107,4 @@ C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-wind
 C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\DernekApp.genruntimeconfig.cache
 C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\obj\Debug\net6.0-windows\ref\DernekApp.dll
 C:\Users\selcu.SELCUK.000\source\repos\DernekApp\DernekApp\bin\Debug\net6.0-windows\ZedGraph6.dll
+C:\Users\DELL\Desktop\GörselDernek\DernekApp\bin\Debug\net6.0-windows\ZedGraph6.dll

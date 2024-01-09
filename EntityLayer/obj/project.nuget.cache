@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ysNBfJ3/LqBJZOvgnAuOJC1mbH/hIpjl1Y91+c6jxf16HzeHu4B+ifMVffjwxQ7pfK5mvF5VS+iV8N3Rk2l3aw==",
+  "dgSpecHash": "96Q61orcfhfRqyolUkWwNG2xEQMCeOT/FjRNTtJpJTcAKQ5cSPU3BZ0Vw2WM2PXB/KxaNEaEhloe+i1745N1LQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\selcu.SELCUK.000\\source\\repos\\DernekApp\\EntityLayer\\EntityLayer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\selcu.SELCUK.000\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\GörselDernek\\EntityLayer\\EntityLayer.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

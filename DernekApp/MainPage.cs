@@ -17,6 +17,7 @@ using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using ZedGraph;
 using System.ComponentModel;
+using DataAccessLayer;
 
 
 namespace DernekApp
@@ -30,7 +31,7 @@ namespace DernekApp
         public MainPage()
         {
             InitializeComponent();
-
+            grafik();
         }
 
         public void yenile()
@@ -297,7 +298,7 @@ namespace DernekApp
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                DataGridViewCell selectedCell = BorcluUyelerGridView.Rows[e.RowIndex].Cells["tc"]; 
+                DataGridViewCell selectedCell = BorcluUyelerGridView.Rows[e.RowIndex].Cells["tc"];
 
                 if (selectedCell.Value != null)
                 {
@@ -314,6 +315,45 @@ namespace DernekApp
             DataTable payments = um.DateDiff(firstDate, secondDate);
 
             SearchGridView.DataSource = payments;
+        }
+
+        public void grafik()
+        {
+
+            GraphPane myPane = zedGraphControl1.GraphPane;
+            PointPairList list = new PointPairList();
+
+            using (OleDbConnection connection = Context.GetConnection())
+            {
+
+                string query = "SELECT sehir, COUNT(*) AS uyeSayisi FROM uyeTablosu GROUP BY sehir";
+
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string sehir = reader["sehir"].ToString();
+                            int uyeSayisi = Convert.ToInt32(reader["uyeSayisi"]);
+
+                            list.Add(list.Count + 1, uyeSayisi, sehir);
+                        }
+                    }
+                }
+            }
+
+            LineItem myBar = myPane.AddCurve("Üye Sayýsý", list, System.Drawing.Color.Blue);
+
+            myPane.XAxis.Title.Text = "Þehirler";
+            myPane.YAxis.Title.Text = "Üye Sayýsý";
+
+            zedGraphControl1.AxisChange();
+
+        }
+
+        private void btnSehirler_Click(object sender, EventArgs e)
+        {
         }
     }
 }

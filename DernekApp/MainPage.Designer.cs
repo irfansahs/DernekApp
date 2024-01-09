@@ -97,7 +97,9 @@
             btnSearchByBlood = new Button();
             SearchGridView = new DataGridView();
             tabPage5 = new TabPage();
+            zedGraphControl1 = new ZedGraph.ZedGraphControl();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            btnSehirler = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -110,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)BorcluUyelerGridView).BeginInit();
             tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SearchGridView).BeginInit();
+            tabPage5.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -786,6 +789,8 @@
             // 
             // tabPage5
             // 
+            tabPage5.Controls.Add(btnSehirler);
+            tabPage5.Controls.Add(zedGraphControl1);
             tabPage5.Location = new Point(4, 24);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
@@ -794,10 +799,35 @@
             tabPage5.Text = "Grafikler";
             tabPage5.UseVisualStyleBackColor = true;
             // 
+            // zedGraphControl1
+            // 
+            zedGraphControl1.Location = new Point(112, 27);
+            zedGraphControl1.Margin = new Padding(4, 3, 4, 3);
+            zedGraphControl1.Name = "zedGraphControl1";
+            zedGraphControl1.ScrollGrace = 0D;
+            zedGraphControl1.ScrollMaxX = 0D;
+            zedGraphControl1.ScrollMaxY = 0D;
+            zedGraphControl1.ScrollMaxY2 = 0D;
+            zedGraphControl1.ScrollMinX = 0D;
+            zedGraphControl1.ScrollMinY = 0D;
+            zedGraphControl1.ScrollMinY2 = 0D;
+            zedGraphControl1.Size = new Size(645, 397);
+            zedGraphControl1.TabIndex = 0;
+            // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // btnSehirler
+            // 
+            btnSehirler.Location = new Point(226, 441);
+            btnSehirler.Name = "btnSehirler";
+            btnSehirler.Size = new Size(169, 37);
+            btnSehirler.TabIndex = 1;
+            btnSehirler.Text = "sehirler";
+            btnSehirler.UseVisualStyleBackColor = true;
+            btnSehirler.Click += btnSehirler_Click;
             // 
             // MainPage
             // 
@@ -827,6 +857,7 @@
             tabPage4.ResumeLayout(false);
             tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SearchGridView).EndInit();
+            tabPage5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -901,5 +932,7 @@
         private DateTimePicker dateFirstDate;
         private Label label20;
         private Label label19;
+        private ZedGraph.ZedGraphControl zedGraphControl1;
+        private Button btnSehirler;
     }
 }

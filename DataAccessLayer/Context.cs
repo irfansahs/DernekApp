@@ -10,7 +10,7 @@ namespace DataAccessLayer
     public class Context
     {
 
-        private const string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\selcu.SELCUK.000\source\repos\DernekApp\Dernek.accdb";
+        private const string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\GörselDernek\DernekAppSeco.accdb";
         public static OleDbConnection GetConnection()
         {
             OleDbConnection connection = new OleDbConnection(ConnectionString);
